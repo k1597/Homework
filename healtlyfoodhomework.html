@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+         }
+         .acctxt{
+             font-family: sans-serif;
+             font-size: 13px;
+         }
+         .searchimg, .heartimg, .searchcarimg, .usdimg{
+             display: block;
+         }
+         .acc{
+             display: flex;
+             align-items: center; 
+             margin-right: 650px;
+             position: relative;
+             left: 42px;
+             text-decoration: none;
+             color: black;
+             transition: 0.5s;
+         }
+         .acc:hover{
+             color:#ffe605;
+         }
+         .searchshop{
+             display: flex;
+             justify-content: flex-end;
+             align-items: center;
+             height: 100%;
+         }
+         .topsearch{
+             display: flex;
+             width: 100%;
+             height: 44.8px;
+             border-bottom: 1px solid rgb(235, 232, 232);
+             padding: 16px 0px 16px 0px;
+             justify-content: space-around;
+         }
+         .imgper{
+             /* width: 11px;
+             height: 13.6px; */
+             width: 15px;
+             height: 17.6px;
+             margin-right: 5px;
+         }
+         .searchimg{
+             /* width: 14.4px;
+             height: 13.6px; */
+             width: 20.4px;
+             height: 19.6px;
+             margin: 0px 10px;
+             margin-top: 21px;
+             margin-right:75px;
+         }
+         .heartimg{
+             /* width: 15.4px;
+             height: 13.6px; */
+             width:19.4px;
+             height: 17.6px;
+             margin: 0px 10px;
+             margin-top: 17px;
+             position: relative;
+             right: 65px;
+         }
+         .searchcarimg{
+            /* width: 21.363px;
+            height: 22.4px; */
+            width: 60.363px;
+            height: 47.4px;
+            margin: 0px 10px;
+            margin-top: 5px;
+            position: relative;
+            right:65px;
+         }
+         .usdimg{
+             /* width: 45px; */
+             width: 50px;
+             height: 34px;
+             margin: 0px 10px;
+             margin-top: 20px;
+             position: relative;
+             right:55px;
+         }
+         .titlemenu{
+             /* width: 1175px; */
+             height: 190.6px;
+             width: 100%;
+             margin: auto;
+             /* margin-left: 165px; */
+             display: flex;
+             font-family: sans-serif;
+             align-items: center;
+             justify-content: space-between;
+             background-color:white;
+             position: sticky;  
+             top: 0;     
+             z-index: 9;
+         }
+         .menu{
+             display: flex;
+             margin-right: 150px;
+         }
+         .healtlytxt{
+             font-weight: 100;
+             font-size: 19px;
+             letter-spacing: 4.5px;
+             margin-left: 162px;
+             white-space: nowrap;
+             transition: 0.5s;
+         }
+         .menu h1{
+             font-size: 16px;
+             margin-left: 20px;
+             transition: 0.2s;
+         }
+         .menu a{
+             text-decoration: none;
+             color: black;
+             transition: 0.3s;
+         }
+         .menu h1:hover{
+             /* padding-bottom:6px;
+             border-bottom: 2px solid black;
+             position: relative;
+             top: 4px; */
+             text-decoration: underline;
+         }
+         .themetxt{
+             width: 192px;
+         }
+         .themetxt a{
+            text-decoration: none;
+             color: black;
+             transition: 0.3s;
+         }
+         .kartxt{
+             margin-left:160px;
+             font-size: 36px;
+         }
+         .hoverhf:hover .healtlytxt{
+             color: #ffe605;
+         }
+         .bimg img{
+             width: 897.65px;
+             height: 609.65px;
+         }
+         .oneimg{
+             display: flex;
+         }
+         .indtxt{
+             font-size: 75px;
+             font-family: sans-serif;
+             font-weight: 345;
+             margin-left: 30px;
+             margin-top: 60px;
+         }
+         .indstxt{
+             width: 280px;
+             font-size: 55px;
+             margin-left:28px ;
+             font-family: sans-serif;
+             font-weight:750;
+             color:#ffe605;
+             margin-top: 16px;
+             line-height: 1.3;
+         }
+         .readm{
+            font-family: sans-serif;
+             width: 195.75px;
+             height: 60px;
+             background-color: black;
+             font-size: 20px;
+             color:white;
+             font-weight:600;
+             border-radius: 5px;
+             text-align: center;
+             line-height: 60px;
+             margin-left: 28px;
+             margin-top: 65px;
+             transition: 0.2s;
+         }
+         .readm a{
+             color: white;
+             text-decoration: none;
+             transition: 0.2s;
+         }
+         .readm a:hover{
+             color:black;
+         }
+         .readm:hover{
+            background-color:#ffe605 ;
+         }
+         .fooditemgroup{
+             display: flex;
+             width:1500px;
+             margin: auto;
+             justify-content: space-around;
+             margin-top: 150px;
+         }
+         .fooditemgroup .fooditem{
+            width: 230px;
+            height: 230px;
+            text-align: center;
+            position: relative;
+            transition: 0.6s;
+         }
+         .fooditem:hover{
+            width: 230px;
+            height: 230px;
+            box-shadow:2px 2px 10px 2px rgb(175, 174, 174);
+         }
+         .foodhref{
+             color: black;
+             transition: 0.6s;
+         }
+         .foodhref:hover{
+             color: #ffe605 
+         }
+         .fooditemgroup .fooditem img{
+             width: 100%;
+             height: 100%;
+         }
+         .fooditemgroup .fooditem .fooditemtxt{
+             font-size: 30px;
+             position: absolute;
+             left: 0;
+             right: 0;
+             margin: auto;
+             bottom: 50px;
+             font-family: sans-serif;
+             font-weight:550;
+         }
+         .grb{
+             display: flex;
+             margin: auto;
+             width: 960px;
+             justify-content: center;
+             margin-top: 85px;
+         }
+         .ggrbitem img{
+             /* width: 470px;
+             height: 610.94px; */
+             /* width: 570px;
+             height: 710.94px; */
+             margin-right: 15px;
+         }
+         .rbgrbitem{
+             margin-left: 16px;
+         }
+         .bbbgrbitem{
+             position: relative;
+             bottom: 107px;
+             left: 15px;
+         }
+         .ggtxt{
+             z-index: 5;
+             position: relative;
+             bottom: 200px;
+             font-family: sans-serif;
+             font-weight:850;
+             left: 50px;
+             line-height: 2;
+         }
+         .ggrbitem{
+             color: white;
+             font-size: 30px;
+         }
+         .ashop{
+            color: white;
+            font-size: 19px;
+            font-weight:600;
+            transition: 0.2s;
+         }
+         .ashop:hover{
+             color: black;
+         }
+         .hctxt{
+            font-size: 40px;
+            color: white;
+            font-weight:600;
+            margin-right: 90px;
+            position: relative;
+            top: 20px;
+            right: 25px;
+            line-height: 1.2;
+            font-stretch: ultra-condensed;
+         }
+         .ashop1{
+             position: relative;
+             top: 30px;
+             right: 20px;
+         }
+         .ashop2{
+             position: relative;
+             right: 20px;
+             bottom: 140px;
+             font-size: 20px;
+             font-weight:600;
+             color: white;
+             transition: 0.2s;
+         }
+         .ashop2:hover{
+             color: black;
+         }
+         .bhctxt{
+            font-size: 40px;
+            color: white;
+            font-weight:560;
+            position: relative;
+            bottom: 180px;
+            right: 20px;
+         }
+         .dctxt{
+             position: relative;
+             bottom: 179px;
+             right: 20px;
+             color: white;
+             font-weight:300;
+             font-size: 17px;
+         }
+         .product{
+             width:1150px;
+             height: 500px;
+             position: relative;
+             text-align: center;
+             margin: auto;
+             bottom: 130px;
+         }
+         .proditemgr{
+             display: flex;
+             margin-top: 50px;
+             justify-content: space-around;
+         }
+         .moneytxt{
+             display: flex;
+             margin-top: 10px;
+         }
+         .moneytxt1{
+             margin-left: 10px;
+         }
+         .moneyde{
+             color: rgb(102, 100, 100);
+             text-decoration:line-through solid rgb(102, 100, 100);
+         }
+         .proditem{
+             font-size: 21px;
+             font-family: sans-serif;
+             font-weight:600;
+             padding: 0px 30px;
+         }
+         .ptxt{
+            font-weight:300;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-right: 90px;
+         }
+         .rimon{
+             margin-left: 15px;
+         }
+         .moneyde1{
+           margin-left: 20px;  
+         }
+         .shopeyeheart{
+             display: flex;
+             margin-right: 25px;
+         }
+         .addcar{
+             width: 133px;
+             height: 38px;
+             border: 2px solid black;
+             border-radius: 10px;
+             margin: 12px 5px;
+         }
+         .eye{
+             width: 38px;
+             height: 38px;
+             border: 2px solid black;
+             border-radius: 10px;
+             margin: 12px 5px;
+         }
+         .heart3{
+             width: 24px;
+             height: 24px;
+             padding: 7px 7px;
+             border: 2px solid black;
+             border-radius: 10px;
+             margin: 12px 5px;
+         }
+         .ptxt1{
+            white-space:nowrap;
+         }
+         .fea{
+            font-family: sans-serif;
+            font-size: 25px;
+         }
+         .freshb{
+            display: flex;
+             width: 1000px;
+             height: 475.775px;
+             margin: auto;
+             position: relative;
+             top: 15px;
+             left: 15px;
+         }        
+         .berryimg{
+             position: absolute;
+             left: 250px;
+         }
+         .berryimg img{
+            width: 852px;
+             height: 465px;
+         }
+         .boxoff{
+             z-index: 2;
+             position: absolute;
+             /* width: 596.7px;
+             height: 460.775px; */
+             /* width: 536.7px; */
+             /* height: 400.775px; */
+             width:580px ;
+             height: 450px;
+             background-color:white;
+             bottom: 82px;
+             right: 550px;
+         }
+         .berrytxt{
+             position: absolute;
+             z-index:3;
+             right: 710px;
+             text-align: center;
+         }
+         .offtxt{
+            white-space:nowrap;
+             font-size: 80px;
+             font-family: sans-serif;
+             font-weight:720;
+         }
+         .frb{
+            font-size: 80px;
+            font-family: sans-serif;
+            white-space:nowrap;
+         }
+         .berryshop{
+             text-decoration: none;
+             font-size: 12px;
+             padding: 12px 32px;
+             width: 135px;
+             height: 38px;
+             font-weight: 600;
+             color: black;
+             position: relative;
+             background-color: rgb(236, 236, 97);
+             top: 40px;
+             border-radius: 10px;
+             font-family: sans-serif;
+             transition: 0.2s;
+         }
+         .berryshop:hover{
+             color:white;
+             background-color: black;
+         }
+         .specialsale{
+             background-color: white;
+             width: 1484px;
+             height: 1005px;
+             margin: 120px auto auto auto;
+             display: flex;
+             justify-content: center;
+         }
+         .specailitem{
+             margin-right: 60px;
+         }
+         .saleitem{
+             text-align: center;
+             position: relative;
+             right: 35px;
+         }
+         .saleitem1{
+             margin-top: 50px;
+             display: flex;
+         }
+         .saleitem2{
+            margin-top: 65px;
+            display: flex;
+         }
+         .saleitem .saletxt{
+             font-size: 24px;
+             font-family: sans-serif;
+             font-weight: 710;
+             margin-top: 20px;
+         }
+         .nill{
+             margin-left: 15px;
+         }
+         .ripc{
+             margin-left: 15px;
+         }
+         .ptx2{
+            font-weight:300;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-right: 90px;
+            font-family: sans-serif;
+         }
+         .ma, .mb, .mc, .md{
+            font-family: sans-serif; 
+            font-weight: 700;
+            font-size: 19px;
+         }
+         .pb{
+            font-family: sans-serif;
+         }
+         .pc{
+            font-family: sans-serif;
+         }
+         .pd{
+            font-family: sans-serif;
+            margin-right: 107px;
+         }
+         .orantxt1{
+             position: relative;
+             font-size: 36px;
+             color: white;
+             bottom: 200px;
+             font-family: sans-serif;
+             font-weight: 700;
+             left: 50px;
+         }
+         .orantxt2{
+             position: relative;
+             font-size: 20px;
+             color: white;
+             bottom: 160px;
+             font-family: sans-serif;
+             font-weight: 600;
+             left: 50px;
+             transition: 0.2s;
+         }
+         .orantxt2:hover{
+             color: black;
+         }
+         .featuredf{
+             width: 1170px;
+             height: 555.8px;
+             margin: auto;
+             text-align: center;
+             position: relative;
+             top: 90px;
+         }
+         .hreffeattxt{
+            text-decoration: none;
+            color: black;
+            transition: 0.2s;
+         }
+         .hreffeattxt:hover{
+             color:#ffe605;
+         }
+         .fpimggroup{
+             display: flex;
+             position: relative;
+             right: 50px;
+             margin-top: 50px;
+         }
+         .fpimg{
+             margin-left: 50px;
+         }
+         .featuretxt{
+             font-size: 24px;
+             font-family: sans-serif;
+         }
+         .feamontxt{
+             width: 360px;
+             position: relative;
+             left:5px;
+             margin-top: 16px;
+         }
+         .mont{
+             position: relative;
+             right: 145px;
+             font-family: sans-serif;
+             font-weight: 400;
+             font-size: 14px;
+         }
+        .featitle{
+            position: relative;
+            right: 60px;
+            top: 8px;
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            white-space:nowrap;
+         }
+         .featitle2{
+             margin-left: 5px;
+         }
+         .featitle3{
+             margin-left: 60px;
+         }
+         .featcontent{
+            font-family: sans-serif;
+            position: relative;
+            top: 16px;
+            font-size: 13px;
+            text-align: left;
+         }
+         .finalinformagroup{
+             height: 460px;
+             background-color: rgb(241, 238, 238);
+             position: relative;
+             top: 150px;
+         }
+         .finalinformagroup{
+             display: flex;
+             font-family: sans-serif;
+             justify-content: center;
+             align-items: center
+         }
+         .finalinformagroup .hreftxt{
+             text-decoration: none;
+             color: black;
+             transition: 0.5s;
+         }
+         .finalinformagroup .hreftxt:hover{
+             color:#ffe605 ;
+         }
+         .finalinform{
+             width: 300px;
+             height: 253.6px;
+             margin-bottom: 10px;
+         }
+         .sfinalitem{
+             margin-top: 25px;
+             line-height: 2;
+             font-size: 14px;
+         }
+         .sfinalitem4{
+             position: relative;
+             bottom: 12px;
+         }
+         .sfinal3{
+             position: relative;
+             top: 20px;
+         }
+         .searchfinal{
+             width: 260px;
+             height: 36px;
+         }
+         .circleimgitem img{
+             width: 35px;
+             height: 35px;
+         }
+         .circleimgitem{
+             width: 60px;
+             height: 60px;
+             background-color: black;
+             border-radius: 30px;
+             text-align: center;
+             line-height: 82px;
+             margin-left: 6px;
+         }
+         .circleimg{
+             display: flex;
+             margin-top: 56px;
+             position: relative;
+             right: 3px;
+         }
+         .footer{
+             /* margin-top: 170px; */
+             text-align: center;
+             width: 100%;
+             height: 10px;
+             /* position: relative;
+             bottom: 10px;
+             top: 145px; */
+             background-color:#ffe605;
+             margin-top: 145px;
+             padding: 20px 0px;
+             font-family: sans-serif; 
+             font-size: 14px; 
+         }
+         .backimg{
+             width: 255px;
+             height: 255px;
+             background-color: rgb(236, 234, 234);
+         }
+         .backimg1{
+            width: 270px;
+            height: 270px;
+            background-color: rgb(236, 234, 234);
+         }
+         .nk{
+             margin-left: 25px;
+         }
+         .backimg2 img{
+             position: relative;
+             right: 10px;
+         }
+    </style>
+</head>
+<body>
+    <div class="topsearch">
+        <a href="#" class="acc"><img src="healthypic/imgper.png" alt="" class="imgper">
+        <h2 class="acctxt">My account</h2></a>
+        <div class="searchshop">
+            <a href="#"><img src="healthypic/searchimg.png" alt="" class="searchimg "></a>  
+            <a href="#"><img src="healthypic/heartimg.png" alt="" class="heartimg"></a> 
+            <a href="#"><img src="healthypic/searchcarimg.png" alt="" class="searchcarimg"></a> 
+            <a href="#"><img src="healthypic/usdimg.png" alt="" class="usdimg"></a>
+        </div>
+    </div>
+    <div class="titlemenu">
+        <div class="themetxt">
+            <div class="kartext">
+                <a href="#" class="hoverhf">
+                    <h1 class="kartxt">KARDONE</h1>
+                    <h1 class="healtlytxt">HEALTLY FOOD</h1>
+                </a>
+            </div>
+            <!-- <a href="#" class="hoverhf"><h1 class="healtlytxt">HEALTLY FOOD</h1></a> -->
+        </div>
+        <div class="menu">
+            <a href="#"><h1>HOME</h1></a>
+            <a href="#"><h1>ABOUT US</h1></a>
+            <a href="#"><h1>COLLECTIONS</h1></a>
+            <a href="#"><h1>BLOG</h1></a>
+            <a href="#"><h1>SALE</h1></a>
+            <a href="#"><h1>CONTACT US</h1></a>
+        </div>
+    </div>
+    <div class="oneimg">
+        <div class="bimg">
+            <img src="healthypic/asset 14.webp" alt="">
+        </div>
+        <div class="txtgro">
+            <div class="indtxt">
+                <p>Fresh and Delicious</p>
+            </div>
+             <div class="indstxt">
+                <p>ALL YEAR ROUND!</p>
+             </div>
+            <div class="readm">
+                 <!-- <p>READ MORE</p> -->
+                 <a href=""><p>READ MORE</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="fooditemgroup">
+        <div class="fooditem">
+            <a href="#" class="foodhref">
+                <img src="healthypic/asset 50.webp" alt="">
+                <div class="fooditemtxt">
+                    <p class="foodtxt">Fresh Fruits</p>
+                </div>   
+            </a>             
+        </div>
+        <div class="fooditem">
+            <a href="#" class="foodhref">
+                <img src="healthypic/asset 51.webp" alt="">
+                 <div class="fooditemtxt">
+                    <p>Veggies</p>
+                </div>
+            </a>           
+        </div>
+        <div class="fooditem">
+            <a href="#" class="foodhref">
+                <img src="healthypic/asset 52.webp" alt="">
+                <div class="fooditemtxt">
+                    <p>Fish</p>
+                </div>
+            </a>           
+        </div>
+        <div class="fooditem">
+            <a href="#" class="foodhref">
+                <img src="healthypic/asset 53.webp" alt="">
+                <div class="fooditemtxt">
+                    <p>Nuts & Seeds</p>
+                 </div>
+            </a>     
+        </div>
+        <div class="fooditem">
+            <a href="#" class="foodhref">
+                <img src="healthypic/asset 54.webp" alt="">
+                <div class="fooditemtxt">
+                    <p>Bread</p>
+                </div>
+            </a>       
+        </div>
+        <div class="fooditem">
+            <a href="#" class="foodhref">
+                <img src="healthypic/asset 55.webp" alt="">
+                <div class="fooditemtxt">
+                    <p>Dairy</p>
+                </div>
+            </a>      
+        </div>
+    </div>
+    <div class="grb">
+        <div class="ggrbitem">
+            <img src="healthypic/asset 56.webp" alt="">
+            <div class="ggtxt">
+                <p>Best Quality Products</p>
+                <a href="#" class="ashop">Shop now</a>
+            </div>
+        </div>
+        <div class="redbluegr">
+            <div class="rbgrbitem">
+                <img src="healthypic/asset 57.webp" alt="">
+                <div class="ggtxt">
+                    <p class="hctxt">Hot Deals:</p>
+                    <p class="hctxt">CRAZY PRICE $2.99</p>
+                    <a href="#" class="ashop ashop1">Shop now</a>
+                </div>
+            </div>
+            <div class="bbitem">
+                <img src="healthypic/asset 58.webp" alt="" class="bbbgrbitem">
+                <div class="ggtxt">
+                    <p class="bhctxt">HURRY UP!</p>
+                    <p class="dctxt">Don't miss your chance to be th first!</p>
+                    <a href="#" class="ashop2">Shop now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="prodtxt">
+            <h1 class="fea">Featured Products</h1>
+        </div>
+        <div class="proditemgr">
+            <div class="proditem">
+                <div class="backimg">
+                    <img src="healthypic/asset 9.webp" alt="">
+                </div>
+                <p class="ptxt">P28 Foods Formulated...</p>
+                <div class="moneytxt moneytxt1">
+                    <p class="moneyde">$26.00</p>
+                    <p class="rimon">$20.00</p>
+                </div>
+                <div class="shopeyeheart">
+                    <a href="#">
+                        <img src="healthypic/addcar.png" alt="" class="addcar">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/eye.png" alt="" class="eye">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/heartimg.png" alt="" class="heart3">
+                    </a>
+                </div>
+            </div>
+            <div class="proditem">
+                <div class="backimg">
+                    <img src="healthypic/asset 10.webp" alt="">
+                </div>
+                <p class="ptxt ptxt1">P28 Foods Formulated...</p>
+                <div class="moneytxt">
+                    <p class="rimon">$29.00-$36.00</p>
+                </div>
+                <div class="shopeyeheart">
+                    <a href="#">
+                        <img src="healthypic/choosecar.png" alt="" class="addcar">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/eye.png" alt="" class="eye">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/heartimg.png" alt="" class="heart3">
+                    </a>
+                </div>
+            </div>
+            <div class="proditem">
+                <div class="backimg">
+                    <img src="healthypic/asset 11.webp" alt="">
+                </div>
+                <p class="ptxt">KIND Nuts&Spices,...</p>
+                <div class="moneytxt">
+                    <p class="rimon">$12.00-$30.00</p>
+                </div>
+                <div class="shopeyeheart">
+                    <a href="#">
+                        <img src="healthypic/choosecar.png" alt="" class="addcar">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/eye.png" alt="" class="eye">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/heartimg.png" alt="" class="heart3">
+                    </a>
+                </div>
+            </div>
+            <div class="proditem">
+                <div class="backimg">
+                    <img src="healthypic/asset 12.webp" alt="">
+                </div>
+                <p class="ptxt">  Justin's Nut Butter...</p>
+                <div class="moneytxt">
+                    <p class="moneyde moneyde1">$33.00</p>
+                    <p class="rimon">$22.00</p>
+                </div>
+                <div class="shopeyeheart">
+                    <a href="#">
+                        <img src="healthypic/addcar.png" alt="" class="addcar">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/eye.png" alt="" class="eye">
+                    </a>
+                    <a href="#">
+                        <img src="healthypic/heartimg.png" alt="" class="heart3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="freshb">
+        <div class="boxoff"></div>
+        <div class="berryimg">
+            <div class="berrytxt">
+                <p class="offtxt">20% OFF</p>
+                <p class="frb">Fresh Berries</p>
+                <a href="#" class="berryshop">SHOW NOW</a>
+            </div>
+            <img src="healthypic/asset 40.webp" alt="">
+        </div>
+    </div>
+    <div class="specialsale">
+        <div class="specailitem">
+            <img src="healthypic/asset 59.webp" alt="">
+            <p class="orantxt1">Looking for something<br>special?</p>
+            <a href="#" class="orantxt2">shop now</a>
+        </div>
+        <div class="saleitem">
+            <p class="saletxt">On sale</p>
+            <div class="saleitem1">
+                <div class="pegroup">
+                    <div class="backimg1">
+                        <img src="healthypic/asset 41.webp" alt="" class="pe">
+                    </div>
+                    <p class="ptx2 pa">P28 Foods Formulated...</p>
+                    <div class="moneytxt">
+                         <p class="rimon ma">$29.00-$36.00</p>
+                    </div>
+                    <div class="shopeyeheart">
+                        <a href="#">
+                            <img src="healthypic/choosecar.png" alt="" class="addcar">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/eye.png" alt="" class="eye">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/heartimg.png" alt="" class="heart3">
+                        </a>
+                    </div>
+                </div>
+                <div class="nillgroup nk">
+                    <div class="backimg1 backimg2">
+                        <img src="healthypic/asset 43.webp" alt="" class="nill">
+                    </div>
+                    <p class="ptxt pb">Nabisco Mini Nilla W...</p>
+                    <div class="moneytxt moneytxt1">
+                        <p class="rimon mb">$30.00</p>
+                    </div>
+                    <div class="shopeyeheart">
+                        <a href="#">
+                            <img src="healthypic/addcar.png" alt="" class="addcar">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/eye.png" alt="" class="eye">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/heartimg.png" alt="" class="heart3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="saleitem2">
+                <div class="kindgroup">
+                    <div class="backimg1">
+                        <img src="healthypic/asset 45.webp" alt="" class="kind">
+                    </div>
+                    <p class="ptx2 pc">KIND Nuts & Spices,...</p>
+                    <div class="moneytxt">
+                         <p class="rimon mc">$12.00-$30.00</p>
+                    </div>
+                    <div class="shopeyeheart">
+                        <a href="#">
+                            <img src="healthypic/choosecar.png" alt="" class="addcar">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/eye.png" alt="" class="eye">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/heartimg.png" alt="" class="heart3">
+                        </a>
+                    </div>
+                </div>
+                <div class="ripcgroup nk">
+                    <div class="backimg1 backimg2">
+                        <img src="healthypic/asset 47.webp" alt="" class="ripc">
+                    </div>
+                    <p class="ptx2 pd">Kashi Cereal Bar,Ri...</p>
+                    <div class="moneytxt">
+                         <p class="rimon md">$23.00</p>
+                    </div>
+                    <div class="shopeyeheart">
+                            <img src="healthypic/banimg.png" alt="" class="addcar">
+                        <a href="#">
+                            <img src="healthypic/eye.png" alt="" class="eye">
+                        </a>
+                        <a href="#">
+                            <img src="healthypic/heartimg.png" alt="" class="heart3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="featuredf">
+        <p class="featuretxt">Featured Posts</p>
+        <div class="fpimggroup">
+            <div class="fpimg"><img src="healthypic/asset 60.webp" alt="">
+                <div class="feamontxt">
+                    <p class="mont">29 January</p>
+                    <a href="#" class="hreffeattxt"><p class="featitle">12 Heavenly Fruits and Honey</p></a>
+                    <p class="featcontent">Caffeine and sugar may give you an energy spike, but the crash that follows will leave you feeling even more tired than before. However, great...</p>
+                </div>           
+            </div>
+            <div class="fpimg"><img src="healthypic/asset 61.webp" alt="">
+                <div class="feamontxt">
+                    <p class="mont">29 January</p>
+                    <a href="#" class="hreffeattxt"><p class="featitle featitle2">The Great Start of Your Weight</p></a>
+                    <p class="featcontent">Kids need energy for sports and play, so it’s important that they’re consuming a nutrient-dense snack about an hour before their activity that contains carbohydrates....</p>
+                </div>
+            </div>
+            <div class="fpimg"><img src="healthypic/asset 62.webp" alt="">
+                <div class="feamontxt">
+                    <p class="mont">29 January</p>
+                    <a href="#" class="hreffeattxt"> <p class="featitle featitle3">The Products that Help You Boost the Enegry</p></a>
+                    <p class="featcontent">Hello, my dears! My name is mary and here, in my blog, I want to share with you my findings and useful thoughts about making...</p>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="finalinformagroup">
+        <div class="finalinform">
+            <h3>Information</h3>
+            <div class="sfinalitem">
+                <a href="#" class="hreftxt"><h4>Home</h4></a>
+                <a href="#" class="hreftxt"><h4>Services</h4></a>
+                <a href="#" class="hreftxt"><h4>Blog</h4></a>
+                <a href="#" class="hreftxt"><h4>About Us</h4></a>
+                <a href="#" class="hreftxt"><h4>Contact Us</h4></a>
+            </div>
+            <div class="circleimg">
+                <div class="circleimgitem">
+                    <a href="#"><img src="healthypic/facimg.png" alt=""></a>
+                </div>
+                <div class="circleimgitem">
+                    <a href="#"><img src="healthypic/birdimg.png" alt=""></a>
+                </div>
+                <div class="circleimgitem">
+                    <a href="#"><img src="healthypic/camimg.png" alt=""></a>
+                </div>
+                <div class="circleimgitem">
+                    <a href="#"><img src="healthypic/ytimg.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="finalinform">
+            <h3>My Account</h3>
+            <div class="sfinalitem">
+                <a href="#" class="hreftxt"><h4>My Account</h4></a>
+                <a href="#" class="hreftxt"><h4>Order History</h4></a>
+                <a href="#" class="hreftxt"><h4>Addresses</h4></a>
+                <a href="#" class="hreftxt"><h4>Wishlist</h4></a>
+                </div>
+            </div>
+        <div class="finalinform">
+            <h3>Our Shop</h3>
+            <div class="sfinalitem"><h4>Address</h4>
+                <h4>4578 Marmora St, San Francisco D04 89GR</h4>
+                <div class="sfinal3">
+                    <h4>Phone</h4>
+                    <a href="#" class="hreftxt"><h4>1-800-1234-567</h4></a>
+                </div>
+            </div>
+        </div>
+        <div class="finalinform">
+            <h3>Newsletter</h3>
+            <div class="sfinalitem sfinalitem4">
+                <h4>Join our mailing list</h4>
+            </div>
+            <input type="search" placeholder="Enter your Email" class="searchfinal">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foottxt">
+            &copy; Healtly Food . Powered by Shopify
+        </div>
+    </div>
+</body>
+</html>
