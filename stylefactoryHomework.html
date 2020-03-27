@@ -35,6 +35,25 @@
     .HideMenu .row {
       text-align: center;
     } */
+    .OffersConnected .Offers .SearchSub a:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .SmallBrowseTxt a:hover {
+      color: white;
+      background-color: black;
+    }
+
+    .JOIN a:hover {
+      color: white;
+      background-color: black;
+    }
+
+    .SmallSaleTxt .Shopcart:hover {
+      color: white;
+      background-color: black;
+    }
 
     .navbar-light .navbar-toggler {
       border: none;
@@ -68,11 +87,11 @@
       text-decoration: none;
     }
 
-    .CarZero a span:hover {
+    .CarZero a:hover span {
       color: rgb(196, 137, 137);
     }
 
-    .CarZero a i:hover {
+    .CarZero a:hover i {
       color: rgb(196, 137, 137);
     }
 
@@ -81,18 +100,49 @@
       margin-left: 20px;
     }
 
+    .NavbarSearch .row .col-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .NavbarSearch .row .col-md-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .CarSearchImg {
       display: flex;
       align-items: center;
-      margin-right: -20px;
     }
 
     .NavbarSearch .row {
-      margin: 0 15px;
+      margin: 0;
     }
 
-    .DropDowns .row .col-md-12 .breadcrumb {
+    .DropDowns {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 6;
+      background-color: #181a1f;
+    }
+
+
+    .DropDowns .breadcrumb {
       background-color: white;
+      padding: 20px 0 10px 0;
+    }
+
+    .DropDowns .breadcrumb .breadcrumb-item a {
+      text-decoration: none;
+    }
+
+    .DropDowns .breadcrumb .breadcrumb-item a:hover {
+      color: #ffa396;
+    }
+
+    .DropDowns .breadcrumb .ColorTxt a {
+      color: #ffa396;
     }
 
     .row {
@@ -103,14 +153,6 @@
     .FullImgGroup {
       position: relative;
       width: 100%;
-    }
-
-    .FullImgTxtGroup {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
     }
 
     .Logo .row {
@@ -127,6 +169,10 @@
 
     .HrefContact i {
       color: gray;
+    }
+
+    .Logo .HrefContact a i:hover {
+      color: black;
     }
 
     .Logo {
@@ -162,6 +208,122 @@
       padding-left: 5px;
     }
 
+    .FullDevelopment {
+      width: 100%;
+      height: 300px;
+      background-color: #1d5275;
+    }
+
+    .HeartEye a i:hover {
+      color: #ffa396;
+    }
+
+    .SEEContent a:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .SmallFeatureTxt .Shopcart:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .NavCate a {
+      text-decoration: none;
+    }
+
+    .NavCate nav a p:hover {
+      color: #7dd0dc;
+    }
+
+    .NavMenu a {
+      text-decoration: none;
+    }
+
+    .NavMenu nav a p:hover {
+      color: #7dd0dc;
+    }
+
+    .NavContact a {
+      text-decoration: none;
+      color: #d3d3d3;
+    }
+
+    .NavContact a p:hover {
+      color: #7dd0dc;
+    }
+
+    .FooterTxt a {
+      text-decoration: none;
+    }
+
+    .FooterTxt a:hover {
+      color: #7dd0dc;
+    }
+
+    .LatestShopping .row a:hover {
+      transform: scale(1.2, 1.2);
+    }
+
+    .Browse a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .Browse .ProductGroup p {
+      padding: 10px 20px 10px 20px;
+      border: 3px solid black;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    .Browse .ProductGroup:hover p {
+      color: white;
+      background-color: #181a1f;
+    }
+
+    /* .Browse a .ProductGroup h4 {
+      padding-bottom: 23px;
+    } */
+
+    /* .Browse a .ProductGroup .SmallBrowseTxt {
+      padding-bottom: 75px;
+    } */
+
+    .Browse .ProductGroup:hover {
+      background-color: #feede9;
+    }
+
+    .SmallSaleTxtThemeTxt {
+      color: black;
+    }
+
+    .SmallSaleTxtThemeTxt:hover {
+      text-decoration: none;
+      color: #7dd0dc;
+    }
+
+    .FeaturetGroup:hover {
+      border: 1px solid black;
+    }
+
+    .SmallFeatureTxtTheme {
+      color: black;
+    }
+
+    .SmallFeatureTxtTheme:hover {
+      color: #7dd0dc;
+      text-decoration: none;
+    }
+
+    .OffersConnected .Connected .HrefContactEnd a:hover {
+      background-color: black;
+    }
+
+    .OffersConnected .Connected .HrefContactEnd a:hover i {
+      color: white;
+    }
+
     @media screen and (max-width:767px) {
       .DropDowns .row .col-md-12 .breadcrumb {
         border-top: 2px solid rgb(211, 206, 206);
@@ -175,25 +337,27 @@
         background-position: center center;
       }
 
-      .FullImgTxtGroup .FullImgTxt {
+      .FullImgTxt {
+        position: absolute;
         color: white;
         font-size: 17px;
-        margin-top: 20px;
-        margin-left: 25px;
         letter-spacing: 2px;
+        top: 5%;
+        left: 3%;
       }
 
-      .FullImgGroup .JOIN a {
-        position: absolute;
+      .JOIN a {
         color: black;
         text-decoration: none;
         background-color: white;
         padding: 5px 5px;
       }
 
-      .FullImgGroup .JOIN {
-        margin-top: 215px;
-        margin-left: 220px;
+      .JOIN {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
       }
 
       .FullImgContent {
@@ -201,11 +365,11 @@
       }
 
       .LatestShopping {
-        padding: 35px 0 75px 0;
+        padding: 35px 0 55px 0;
       }
 
-      .LatestShopping .row .col-md-4 {
-        padding: 37px 0;
+      .LatestShopping .row {
+        padding: 20px 0;
       }
 
       .LatestShopping .row .Item h4 {
@@ -225,7 +389,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: -25px;
+        bottom: -37px;
       }
 
       .LatestShopping .row .ItemTopLineG::before {
@@ -237,7 +401,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -25px;
+        top: -29px;
       }
 
       .LatestShopping .row .ItemTopLineB::before {
@@ -249,7 +413,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -25px;
+        top: -29px;
       }
 
       .LatestShopping .row .ItemTopLineO::before {
@@ -261,8 +425,32 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -25px;
+        top: -29px;
       }
+
+      .LatestShopping .row .col-10 {
+        padding: 20px 0;
+      }
+
+
+
+      .LatestShopping .row a {
+        display: block;
+        padding: 30px 0;
+        position: relative;
+        transition: 0.3s;
+      }
+
+      .LatestShopping .row a:hover {
+        text-decoration: none;
+      }
+
+      .LatestShopping .row a h4 {
+        color: black;
+        text-decoration: none;
+      }
+
+
 
       .RectangleG {
         position: absolute;
@@ -272,7 +460,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: 12px;
+        top: 2px;
       }
 
       .RectangleB {
@@ -283,7 +471,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: 12px;
+        top: 2px;
       }
 
       .RectangleO {
@@ -294,39 +482,46 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: 12px;
+        top: 2px;
+      }
+
+      .HairExten .row .col-12 .HairTxtGroup a:hover {
+        color: white;
+        background-color: black;
       }
 
       .Browse {
-        padding: 0 35px;
+        padding-top: 20px;
+        text-align: center;
       }
 
-      .Browse .BrowseThemeTxt {
-        text-align: center;
-        padding: 35px 0px;
-        font-weight: 300;
+      .Browse .row .col-12{
+        padding-bottom:45px;
+      }
+      .Browse .BrowseThemeTxt{
+        padding-bottom:15px;
       }
 
       .Browse .BrowseThemeTxt strong {
         font-weight: 700;
       }
-
-      .SmallBrowseTxt {
-        text-align: center;
-        padding: 73px 0;
-        border: 1px solid rgb(196, 190, 190);
+      
+      .ProductGroup p{
+        margin-top: 25px;
       }
-
       .ProductGroup {
-        padding: 0 0 50px 0;
+        padding: 0 0 85px 0;
+        text-align: center;
+        border: 1px solid rgb(207, 203, 203);
+        display: inline-block;
       }
 
-      .SmallBrowseTxt h4 {
+      .ProductGroup h4 {
         font-size: 20px;
-        margin-bottom: 15px;
+        margin-top: 45px;
       }
 
-      .SmallBrowseTxt a {
+      /* .SmallBrowseTxt a {
         font-size: 15px;
         border: 3px solid black;
         text-decoration: none;
@@ -335,7 +530,7 @@
         font-weight: 500;
         display: inline-block;
         margin-top: 20px;
-      }
+      } */
 
       .Sale {
         padding: 0 25px;
@@ -344,7 +539,7 @@
 
       .Sale .SaleThemeTxt {
         text-align: center;
-        padding: 35px 0px 15px 0;
+        padding: 10px 0px 15px 0;
         font-weight: 300;
       }
 
@@ -362,6 +557,10 @@
         display: flex;
         border: 1px solid rgb(184, 180, 180);
         padding: 30px 0 25px 0;
+      }
+
+      .SaletGroup:hover {
+        border: 1px solid black;
       }
 
       .SmallSaleTxt h4 {
@@ -449,9 +648,367 @@
         bottom: 275px;
       }
 
-      .SaleImg .RbNew {
+      .SaleImg .BNew {
         position: absolute;
         bottom: 270px;
+      }
+
+      .SaleImg .Perenct {
+        display: none;
+      }
+
+      .See {
+        padding: 0 55px;
+      }
+
+      .See h3 {
+        text-align: center;
+        padding: 60px 0 30px 0;
+        font-weight: 300;
+        font-size: 26px;
+      }
+
+      .See h3 strong {
+        font-weight: 500;
+      }
+
+      .SEEContent {
+        text-align: center;
+      }
+
+      .Month {
+        text-align: center;
+      }
+
+      .Month h4 {
+        font-weight: 700;
+        font-size: 20px;
+        position: relative;
+      }
+
+      .Month p {
+        padding: 5px 0 10px 0;
+      }
+
+      .SEEContent h4 {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 20px 0 5px 0;
+      }
+
+      .SEEContent a {
+        font-size: 15px;
+        color: black;
+        font-weight: 500;
+        padding: 5px 20px;
+        border: 3px solid black;
+        display: inline-block;
+        text-decoration: none;
+        margin: 5px 0 60px 0;
+      }
+
+      .Month h4::before {
+        content: '';
+        position: absolute;
+        border-top: 1px solid rgb(214, 209, 209);
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 45px;
+      }
+
+      .Month .rectangle {
+        position: absolute;
+        width: 45px;
+        height: 5px;
+        background-color: black;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -22px;
+      }
+
+
+
+
+      .Feature {
+        padding: 0 25px;
+        width: 100%;
+      }
+
+      .Feature .FeatureThemeTxt {
+        text-align: center;
+        padding: 35px 0px 15px 0;
+        font-weight: 300;
+      }
+
+      .Feature .FeatureThemeTxt strong {
+        font-weight: 700;
+      }
+
+      .SmallFeatureTxt {
+        text-align: center;
+        width: 70%;
+        margin-top: 10px;
+      }
+
+      .FeaturetGroup {
+        display: flex;
+        border: 1px solid rgb(184, 180, 180);
+        padding: 30px 0 25px 0;
+      }
+
+      .SmallFeatureTxt h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: 300;
+        margin: auto auto -1px auto;
+        width: 75%;
+      }
+
+      .FeaturetGroup .FeatureImg {
+        width: 85px;
+        margin-left: 42px;
+        position: relative;
+      }
+
+      .FeaturetGroup .FeatureImg img {
+        max-width: 100%;
+      }
+
+      .SmallFeatureContent {
+        font-size: 12px;
+        padding: 0 12% 0 10%;
+        margin: auto;
+        letter-spacing: 1px;
+      }
+
+      .SmallFeatureTxt .Money {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 5px 0 2px 0
+      }
+
+      .SmallFeatureTxt .eye {
+        display: none;
+      }
+
+      .SmallFeatureTxt .Shopcart {
+        font-size: 15px;
+        border: 3px solid black;
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      .SmallFeatureTxt .heart {
+        display: block;
+        font-size: 20px;
+        margin-top: 20px;
+        color: gray;
+      }
+
+      .SmallFeatureTxt a {
+        text-decoration: none;
+      }
+
+      .FeatureImg span {
+        position: absolute;
+        color: white;
+        background-color: rgb(247, 125, 125);
+        font-size: 12px;
+        padding: 5px 10px;
+        right: 55px;
+        bottom: 260px;
+      }
+
+      .SmallFeatureTxt .LineMoney {
+        font-size: 20px;
+        font-weight: 700;
+        color: gray;
+        text-decoration: line-through;
+        margin-top: 5px;
+      }
+
+      .FeatureImg .Perenct {
+        display: none;
+      }
+
+      .MoneyGroup {
+        padding: 10px 0 20px 0;
+      }
+
+      .Ban {
+        font-size: 15px;
+        border: 3px solid black;
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        font-weight: 500;
+        display: inline-block;
+        opacity: 0.3;
+      }
+
+      .FollowConnected {
+        text-align: center;
+      }
+
+      .FollowConnected h3 {
+        font-size: 26px;
+        font-weight: 300;
+        padding: 60px 0;
+      }
+
+      .FollowConnected h3 strong {
+        font-weight: 500;
+      }
+
+      .OffersConnected {
+        background-color: #e7f5f7;
+        padding: 60px 0;
+      }
+
+      .OffersConnected .Offers h4 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .OffersConnected .Offers h5 {
+        font-size: 22px;
+        font-weight: 300;
+        padding: 0 0 20px 0;
+        width: 75%;
+        margin: auto;
+      }
+
+      .OffersConnected .Offers .SearchSub .Searchlocal {
+        width: 160px;
+      }
+
+      .OffersConnected .Offers .SearchSub a {
+        text-decoration: none;
+        color: black;
+        border: 3px solid black;
+        font-weight: 500;
+        padding: 2px 10px;
+      }
+
+      .OffersConnected .Connected h4 {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 25px 0 0 0;
+      }
+
+      .OffersConnected .Connected .HrefContactEnd a i {
+        font-size: 12px;
+        color: black;
+      }
+
+      .OffersConnected .Connected .HrefContactEnd a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+
+
+      .OffersConnected .Connected .HrefContactEnd {
+        padding: 10px 0 20px 0;
+      }
+
+      .EndNavGroup {
+        background-color: #181a1f;
+        padding: 60px 0 85px 0;
+      }
+
+      .NavLogo p {
+        color: #d3d3d3;
+        font-size: 16px;
+        margin-top: 25px;
+      }
+
+      .NavCate h3 {
+        font-size: 18px;
+        color: white;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      .NavCate p {
+        color: #d3d3d3;
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 26px;
+        line-height: 0.3;
+      }
+
+      .NavMenu h3 {
+        font-size: 18px;
+        color: white;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+
+      .NavMenu p {
+        color: #d3d3d3;
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 26px;
+        line-height: 0.3;
+      }
+
+      .NavContact h3 {
+        font-size: 18px;
+        color: white;
+        font-weight: 600;
+        width: 60%;
+        margin-top: 23px;
+      }
+
+      .NavContact address {
+        color: #d3d3d3;
+        font-weight: 300;
+        font-size: 16px;
+        width: 70%;
+        line-height: 2;
+        margin-top: 15px;
+      }
+
+      .NavContact address .mail {
+        margin-top: -12px;
+      }
+
+      footer {
+        text-align: center;
+        color: #d3d3d3;
+        font-size: 15px;
+        width: 100%;
+        background-color: #222326;
+        padding: 20px 0;
+      }
+
+      footer span a {
+        color: #d3d3d3;
+        font-size: 15px;
+      }
+
+      .DropDowns {
+        display: none;
+      }
+
+      .dropdown .btn {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        border-top: 3px solid rgb(228, 222, 222);
+        padding: 15px 0;
+      }
+
+      .dropdown .btn span {
+        margin-right: 60%;
       }
     }
 
@@ -514,6 +1071,14 @@
     }
 
     @media screen and (min-width:768px) {
+      .NavbarSearch .navbar-toggler {
+        margin-left: 6%;
+      }
+
+      .NavbarSearch .CarSearchImg {
+        margin-right: 2%;
+      }
+
       .FullImg {
         background-image: url('stylefactoryimg/greeting_image.jpg');
         background-size: cover;
@@ -543,61 +1108,82 @@
         margin-top: 10px;
       }
 
-      .DropDowns .row .col-md-12 .breadcrumb {
+      .DropDowns .breadcrumb {
         justify-content: center;
       }
 
-      .DropDowns .row .col-md-12 .breadcrumb a {
+      .DropDowns .breadcrumb a {
         color: black;
       }
 
-      .DropDowns .row .col-md-12 .breadcrumb-item+.breadcrumb-item::before {
+      .DropDowns .breadcrumb-item+.breadcrumb-item::before {
         padding: 0 20px;
       }
 
-      .FullImgTxtGroup {
-        display: flex;
+      .FullImgTxt {
+        color: white;
+        position: absolute;
+        font-size: 30px;
+        letter-spacing: 2px;
+        max-width: 600px;
+        top: 200px;
+        left: 112px;
+        text-align: right;
       }
 
-      .FullImgTxtGroup .FullImgTxt {
-        color: white;
-        font-size: 33px;
-        margin-top: 200px;
-        margin-left: 55px;
-        letter-spacing: 2px;
-        max-width: 650px;
-        text-align: right;
+      .FullImgTxt::before {
+        content: '';
+        position: absolute;
+        width: 550px;
+        height: 1px;
+        background-color: white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-left: 45px;
+        top: -20px;
+      }
+
+      .FullImgTxt::after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 5px;
+        background-color: white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-left: 45px;
+        top: -20px;
       }
 
       .FullImgContent {
         width: 410px;
         color: white;
         font-size: 17px;
-        align-self: flex-end;
-        margin-left: 75px;
-        margin-bottom: 70px;
+        position: absolute;
+        top: 79%;
+        left: 62%;
       }
 
-      .FullImgGroup .JOIN a {
+      .JOIN a {
         color: black;
         text-decoration: none;
         background-color: white;
-        padding: 30px 40px;
         font-size: 20px;
+        padding: 31px 40px;
       }
 
-      .FullImgGroup .JOIN {
-        align-self: flex-end;
-        margin-bottom: 25px;
-        margin-left: -45px;
+      .JOIN {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 30px 40px;
+        text-align: center;
       }
 
       .LatestShopping {
-        padding: 175px 145px 160px 145px;
-      }
-
-      .LatestShopping .row .Item {
-        position: relative;
+        padding: 6% 145px 7% 145px;
       }
 
       .LatestShopping .row .Item::after {
@@ -607,11 +1193,16 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: -60px;
+        bottom: 0;
       }
 
       .LatestShopping .row .col-md-4 {
         padding: 0 35px;
+      }
+
+      .LatestShopping .row .col-md-4 a {
+        height: 100%;
+        position: relative;
       }
 
       .LatestShopping .row .ItemTopLineG::before {
@@ -621,7 +1212,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 165px;
+        top: 0;
       }
 
       .LatestShopping .row .ItemTopLineB:before {
@@ -631,7 +1222,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 165px;
+        top: 0;
       }
 
       .LatestShopping .row .ItemTopLineO:before {
@@ -641,7 +1232,21 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 165px;
+        top: 0;
+      }
+      .LatestShopping .row .col-md-4 a {
+        display: block;
+        padding: 82px 0 50px 0;
+        transition: 0.3s;
+      }
+
+      .LatestShopping .row .col-md-4 a:hover {
+        text-decoration: none;
+      }
+
+      .LatestShopping .row .col-md-4 a h4 {
+        color: black;
+        text-decoration: none;
       }
 
       .RectangleG {
@@ -652,7 +1257,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -82px;
+        top: 0px;
       }
 
       .RectangleB {
@@ -663,7 +1268,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -82px;
+        top: 0px;
       }
 
       .RectangleO {
@@ -674,7 +1279,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: -82px;
+        top: 0px;
       }
 
       .HairImg {
@@ -685,19 +1290,10 @@
         background-position: center center;
       }
 
-      .HairTxtGroup {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        right: 0;
-        text-align: left;
-        margin-top: 45px;
-      }
 
       .HairExten {
         position: relative;
-        padding: 0 160px;
+        padding: 0 12%;
       }
 
       .HairTxtGroup .Hair {
@@ -705,6 +1301,9 @@
         color: white;
         font-weight: 700;
         margin-top: 25px;
+        position: absolute;
+        right: 35%;
+        top: 15%;
       }
 
       .HairTxtGroup .Extensions {
@@ -712,12 +1311,18 @@
         font-weight: 300;
         margin-top: -20px;
         letter-spacing: 5px;
+        position: absolute;
+        right: 9%;
+        top: 45%;
       }
 
       .HairTxtGroup h4 {
         font-size: 30px;
         font-weight: 300;
         margin-top: 20px;
+        position: absolute;
+        right: 13%;
+        top: 60%;
       }
 
       .HairTxtGroup a {
@@ -729,6 +1334,14 @@
         font-weight: 500;
         display: inline-block;
         margin-top: 20px;
+        position: absolute;
+        right: 46%;
+        top: 73%;
+      }
+
+      .HairExten .row .col-md-12 .HairTxtGroup a:hover {
+        color: white;
+        background-color: black;
       }
 
       .Browse {
@@ -746,23 +1359,24 @@
         font-weight: 700;
       }
 
-      .SmallBrowseTxt {
-        text-align: center;
-        padding: 73px 0 60px 0;
-        border: 1px solid rgb(196, 190, 190);
-      }
 
       .ProductGroup {
-        padding: 0 0 50px 0;
+        text-align: center;
+        padding: 0 0 100px 0;
+        border: 1px solid rgb(207, 203, 203);
+        display: inline-block;
       }
 
-      .SmallBrowseTxt h4 {
+      .ProductGroupTrea{
+        padding-bottom: 73px;
+      }
+      .ProductGroup h4 {
         font-size: 23px;
-        margin-bottom: 15px;
+        padding-top: 75px;
         font-weight: 700;
       }
 
-      .SmallBrowseTxt a {
+      .ProductGroup p {
         font-size: 15px;
         border: 3px solid black;
         text-decoration: none;
@@ -770,28 +1384,15 @@
         padding: 10px 15px;
         font-weight: 500;
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 30px;
       }
-
-      .SmallBrowseTxtHair {
-        padding-bottom: 33px;
-      }
-
-
-
-
-
-
-
-
-
       .Sale {
         padding: 0 175px;
       }
 
       .Sale .SaleThemeTxt {
         text-align: center;
-        padding: 35px 0px;
+        padding: 25px 0px 50px 0;
         font-weight: 300;
         font-size: 40px;
       }
@@ -802,12 +1403,16 @@
 
       .SmallSaleTxt {
         text-align: center;
-        padding:25px 0 60px 0;
+        padding: 25px 0 60px 0;
       }
 
       .SaletGroup {
-        padding: 0 0 50px 0;
+        padding-top: 15px;
         border: 1px solid rgb(207, 203, 203);
+      }
+
+      .SaletGroup:hover {
+        border: 1px solid black;
       }
 
       .SmallSaleTxt h4 {
@@ -819,6 +1424,7 @@
       .SaleImg {
         width: 200px;
         margin: auto;
+        position: relative;
       }
 
       .SaleImg img {
@@ -838,34 +1444,438 @@
         font-weight: 500;
         display: inline-block;
       }
-      .SmallSaleTxt .Money{
+
+      .SmallSaleTxt .Money {
         font-size: 20px;
         font-weight: 700;
       }
-      .SmallSaleTxt .From{
+
+      .SmallSaleTxt .From {
         font-size: 20px;
         font-weight: 700;
         color: gray;
       }
-      .SmallSaleTxt h4{
+
+      .SmallSaleTxt h4 {
         font-weight: 300;
       }
-      .SmallSaleTxt .LineMoney{
+
+      .SmallSaleTxt .LineMoney {
         text-decoration: line-through;
         font-size: 20px;
         font-weight: 700;
         color: gray;
       }
-      .HeartEye{
+
+      .HeartEye {
         font-size: 18px;
         margin-top: 25px;
       }
-      .heart{
+
+      .heart {
         color: gray;
         margin-right: 15px;
       }
-      .eye{
+
+      .eye {
         color: gray;
+      }
+
+      .SmallSaleTxtLine {
+        padding-bottom: 30px;
+      }
+
+      .SaleImg span {
+        color: white;
+        background-color: #ffa396;
+        font-size: 13px;
+        padding: 5px 10px;
+      }
+
+      .SaleImg .Perenct {
+        position: absolute;
+        left: 160px;
+        bottom: 195px;
+        background-color: #7dd0dc;
+      }
+      .See {
+        text-align: center;
+        padding: 0 145px;
+      }
+
+      .See h3 {
+        font-size: 40px;
+        font-weight: 300;
+        padding: 100px 0 70px 0;
+      }
+
+      .See h3 strong {
+        font-weight: 600;
+      }
+
+      .SeeImg {
+        margin: 0 30px;
+      }
+
+      .SeeGroup h4 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .SeeGroup p {
+        padding-bottom: 10px;
+      }
+
+      .SEEContent h4 {
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 20px;
+      }
+
+      .SEEContent p {
+        font-size: 18px;
+        box-sizing: border-box;
+        padding: 0 30px;
+      }
+
+      .SEEContent a {
+        font-size: 15px;
+        color: black;
+        font-weight: 500;
+        padding: 5px 20px;
+        border: 3px solid black;
+        display: inline-block;
+        text-decoration: none;
+        margin: 5px 0 60px 0;
+      }
+
+      .Month h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 350px;
+        height: 1px;
+        background-color: rgb(209, 204, 204);
+        bottom: 513px;
+      }
+
+      .Month .rectangle {
+        position: absolute;
+        width: 45px;
+        height: 5px;
+        background-color: black;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -25px;
+      }
+
+      .Feature {
+        padding: 0 175px;
+      }
+
+      .Feature .FeatureThemeTxt {
+        text-align: center;
+        padding: 35px 0px;
+        font-weight: 300;
+        font-size: 40px;
+      }
+
+      .Feature .FeatureThemeTxt strong {
+        font-weight: 700;
+      }
+
+      .SmallFeatureTxt {
+        text-align: center;
+        padding: 25px 0 35px 0;
+      }
+
+      .FeaturetGroup {
+        padding-top: 15px;
+        border: 1px solid rgb(207, 203, 203);
+      }
+
+      .SmallFeatureTxt h4 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        width: 90%;
+        margin: auto;
+      }
+
+      .FeatureImg {
+        width: 200px;
+        margin: auto;
+        position: relative;
+      }
+
+      .FeatureImg img {
+        max-width: 100%;
+      }
+
+      .SmallFeatureContent {
+        display: none;
+      }
+
+      .SmallFeatureTxt .Shopcart {
+        font-size: 15px;
+        border: 3px solid black;
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      .SmallFeatureTxt .Money {
+        font-size: 20px;
+        font-weight: 700;
+        padding-right: 5px;
+        margin-top: 10px;
+      }
+
+      .SmallFeatureTxt .From {
+        font-size: 20px;
+        font-weight: 700;
+        color: gray;
+      }
+
+      .SmallFeatureTxt h4 {
+        font-weight: 300;
+      }
+
+      .SmallFeatureTxt .LineMoney {
+        text-decoration: line-through;
+        font-size: 20px;
+        font-weight: 700;
+        color: gray;
+      }
+
+      .HeartEye {
+        font-size: 18px;
+        margin-top: 25px;
+      }
+
+      .heart {
+        color: gray;
+        margin-right: 15px;
+      }
+
+      .eye {
+        color: gray;
+      }
+
+      .SmallFeatureTxtLine {
+        padding-bottom: 30px;
+      }
+
+      .FeatureImg span {
+        color: white;
+        background-color: #ffa396;
+        font-size: 13px;
+        padding: 5px 10px;
+        margin-left: -20px;
+      }
+
+      .FeatureImg .Perenct {
+        position: absolute;
+        left: 180px;
+        bottom: 195px;
+        background-color: #7dd0dc;
+      }
+
+      .Feature h3 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 300;
+        padding: 50px 0 60px 0;
+      }
+
+      .Feature h3 strong {
+        font-weight: 500;
+        padding-right: 20px;
+      }
+
+      .Ban {
+        font-size: 15px;
+        border: 3px solid black;
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        font-weight: 500;
+        display: inline-block;
+        opacity: 0.3;
+      }
+
+      .ShopcartLine {
+        margin-top: 16px;
+      }
+
+      .SmallFeatureTxt .MoneyGroup {
+        margin-top: 10px;
+      }
+
+      .FollowConnected {
+        text-align: center;
+      }
+
+      .FollowConnected h3 {
+        font-size: 40px;
+        font-weight: 300;
+        padding: 95px 0;
+      }
+
+      .FollowConnected h3 strong {
+        font-weight: 500;
+      }
+
+      .OffersConnected {
+        background-color: #e7f5f7;
+        padding: 90px 0;
+      }
+
+      .OffersConnected .Offers h4 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .OffersConnected .Offers h5 {
+        font-size: 24px;
+        font-weight: 300;
+        padding: 0 0 30px 0;
+      }
+
+      .OffersConnected .Offers .SearchSub .Searchlocal {
+        width: 370px;
+      }
+
+      .OffersConnected .Offers .SearchSub a {
+        text-decoration: none;
+        color: black;
+        border: 3px solid black;
+        font-weight: 500;
+        padding: 2px 10px;
+      }
+
+      .OffersConnected .Connected h4 {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 65px 0 0 0;
+      }
+
+      .OffersConnected .Connected .HrefContactEnd a i {
+        font-size: 20px;
+        color: black;
+      }
+
+      .OffersConnected .Connected .HrefContactEnd a {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border: 2px solid black;
+        border-radius: 50%;
+        line-height: 60px;
+      }
+
+      /* .OffersConnected .Connected .HrefContactEnd a::before {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 2px solid black;
+        border-radius: 50%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      } */
+
+      .OffersConnected .Connected .HrefContactEnd {
+        padding: 30px 0;
+      }
+
+      .EndNavGroup {
+        background-color: #181a1f;
+        padding: 95px 140px 85px 140px;
+      }
+
+      .NavLogo p {
+        color: #d3d3d3;
+        font-size: 20px;
+        width: 95%;
+        margin-top: 25px;
+      }
+
+      .NavCate h3 {
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+      }
+
+      .NavCate p {
+        color: #d3d3d3;
+        font-weight: 300;
+        font-size: 20px;
+        margin-top: 26px;
+        line-height: 1;
+      }
+
+      .NavMenu h3 {
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+      }
+
+      .NavMenu p {
+        color: #d3d3d3;
+        font-weight: 300;
+        font-size: 20px;
+        margin-top: 26px;
+        line-height: 1;
+      }
+
+      .NavContact h3 {
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+        width: 60%;
+      }
+
+      .NavContact address {
+        color: #d3d3d3;
+        font-weight: 300;
+        font-size: 20px;
+        width: 70%;
+        line-height: 2;
+        margin-top: 20px;
+      }
+
+      .NavContact address .mail {
+        margin-top: -15px;
+      }
+
+      footer {
+        color: #d3d3d3;
+        font-size: 15px;
+        width: 100%;
+        background-color: #222326;
+        padding: 20px 0;
+      }
+
+      footer span a {
+        color: #d3d3d3;
+        font-size: 15px;
+      }
+
+      .FooterTxt {
+        margin-left: 155px;
+      }
+
+      .dropdown {
+        display: none;
       }
     }
   </style>
@@ -950,29 +1960,36 @@
           <a href=""><i class="fab fa-youtube"></i></a>
           <a href=""><i class="fab fa-pinterest"></i></a>
           <a href=""><i class="fab fa-google-plus-g"></i></a>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="DropDowns">
-    <div class="row">
-      <div class="col-md-12">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">HOME</a></li>
-            <li class="breadcrumb-item"><a href="#">PRODUCTS</a></li>
-            <li class="breadcrumb-item"><a href="#">BLOG</a></li>
-            <li class="breadcrumb-item"><a href="#">SALE</a></li>
-            <li class="breadcrumb-item"><a href="#">ABOUT US</a></li>
-            <li class="breadcrumb-item"><a href="#">CONTACT US</a></li>
-          </ol>
         </nav>
       </div>
     </div>
   </div>
-  <div class="FullImgGroup">
-    <div class="FullImg"></div>
-    <div class="FullImgTxtGroup">
+  <div class="DropDowns">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item ColorTxt"><a href="#">HOME</a></li>
+        <li class="breadcrumb-item"><a href="#">PRODUCTS</a></li>
+        <li class="breadcrumb-item"><a href="#">BLOG</a></li>
+        <li class="breadcrumb-item"><a href="#">SALE</a></li>
+        <li class="breadcrumb-item"><a href="#">ABOUT US</a></li>
+        <li class="breadcrumb-item"><a href="#">CONTACT US</a></li>
+      </ol>
+    </nav>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-white dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      <span>STYLE FACTORY</span>
+    </button>
+    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+  <main>
+    <div class="FullImgGroup">
+      <div class="FullImg"></div>
       <h3 class="FullImgTxt">JOIN OUR <strong>DISCOUNT</strong> CLUB & <strong>SAVE 25%</strong> ON EVERYTHING!</h3>
       <div class="JOIN">
         <a href="#">
@@ -986,169 +2003,465 @@
         styles and colors.
       </p>
     </div>
-  </div>
-  <div class="LatestShopping">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <div class="RectangleG"></div>
-        <div class="Item ItemTopLineG">
-          <h3 class="NEW">NEW ARRIVALS</h3>
-          <h4>SEE OUR LATEST MUST-HAVES>></h4>
+    <div class="LatestShopping">
+      <div class="row">
+        <div class="col-10 offset-1 col-md-4 offset-md-0">
+          <a href="">
+            <div class="RectangleG"></div>
+            <div class="Item ItemTopLineG">
+              <h3 class="NEW">NEW ARRIVALS</h3>
+              <h4>SEE OUR LATEST MUST-HAVES>></h4>
+            </div>
+          </a>
         </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="RectangleB"></div>
-        <div class="Item ItemTopLineB">
-          <h3 class="WE">WE LOVE<i class="far fa-heart"></i></h3>
-          <h4>CHECK OUT STYLISH FAVORITES>></h4>
+        <div class="col-10 offset-1 col-md-4 offset-md-0">
+          <a href="">
+            <div class="RectangleB"></div>
+            <div class="Item ItemTopLineB">
+              <h3 class="WE">WE LOVE<i class="far fa-heart"></i></h3>
+              <h4>CHECK OUT STYLISH FAVORITES>></h4>
+            </div>
+          </a>
         </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="RectangleO"></div>
-        <div class="Item ItemTopLineO">
-          <h3 class="FREE">FREE SHIPPING</h3>
-          <h4>ON ALL 2016 COLLECTION>></h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="HairExten">
-    <div class="row">
-      <div class="col-12 col-md-12">
-        <div class="HairImg"></div>
-        <div class="HairTxtGroup">
-          <h3 class="Hair">HAIR</h3>
-          <h3 class="Extensions">EXTENSIONS</h3>
-          <h4>ADD LENGTH & VOLUME IN SECONDS</h4>
-          <a href="#">Read More</a>
+        <div class="col-10 offset-1 col-md-4 offset-md-0">
+          <a href="">
+            <div class="RectangleO"></div>
+            <div class="Item ItemTopLineO">
+              <h3 class="FREE">FREE SHIPPING</h3>
+              <h4>ON ALL 2016 COLLECTION>></h4>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="Browse">
-    <h3 class="BrowseThemeTxt"><strong>BROWSE</strong> OUR CATEGORIES</h3>
-    <div class="row no-gutters">
-      <div class="col-12 col-md-3">
-        <div class="ProductGroup">
-          <img src="stylefactoryimg/category1_c699b5ea-b75e-4185-9a8e-2a65b0fc3814_430x396_crop_top.jpg" alt=""
-            class="d-block w-100">
-          <div class="SmallBrowseTxt">
+    <div class="HairExten">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <div class="HairImg"></div>
+          <div class="HairTxtGroup">
+            <h3 class="Hair">HAIR</h3>
+            <h3 class="Extensions">EXTENSIONS</h3>
+            <h4>ADD LENGTH & VOLUME IN SECONDS</h4>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Browse">
+      <h3 class="BrowseThemeTxt"><strong>BROWSE</strong> OUR CATEGORIES</h3>
+      <div class="row no-gutters">
+        <div class="col-12 col-md-3">
+          <a href="" class="ProductGroup">
+            <img src="stylefactoryimg/category1_c699b5ea-b75e-4185-9a8e-2a65b0fc3814_430x396_crop_top.jpg" alt=""
+              class="d-block w-100">
             <h4>MEN'S HAIR CARE</h4>
-            <a href="#">7 products</a>
-          </div>
+            <p>7 products</p>
+          </a>
         </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="ProductGroup">
-          <img src="stylefactoryimg/category2_430x396_crop_top.jpg" alt="" class="d-block w-100">
-          <div class="SmallBrowseTxt">
+        <div class="col-12 col-md-3">
+          <a href="" class="ProductGroup">
+            <img src="stylefactoryimg/category2_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR STYLING</h4>
-            <a href="#">13 products</a>
-          </div>
+            <p>13 products</p>
+          </a>
         </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="ProductGroup">
-          <img src="stylefactoryimg/category3_430x396_crop_top.jpg" alt="" class="d-block w-100">
-          <div class="SmallBrowseTxt SmallBrowseTxtHair">
+        <div class="col-12 col-md-3">
+          <a href="" class="ProductGroup ProductGroupTrea">
+            <img src="stylefactoryimg/category3_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR HEALTH TREATMENT</h4>
-            <a href="#">9 products</a>
-          </div>
+            <p>9 products</p>
+          </a>
         </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="ProductGroup">
-          <img src="stylefactoryimg/category4_430x396_crop_top.jpg" alt="" class="d-block w-100">
-          <div class="SmallBrowseTxt">
+        <div class="col-12 col-md-3">
+          <a href="" class="ProductGroup">
+            <img src="stylefactoryimg/category4_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR CARE FOR KIDS</h4>
-            <a href="#">7 products</a>
+            <p>7 products</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="Sale">
+      <h3 class="SaleThemeTxt"><strong>PRODUCTS</strong> ON SALE</h3>
+      <div class="row no-gutters">
+        <div class="col-12 col-md-3">
+          <div class="SaletGroup">
+            <div class="SaleImg">
+              <span>NEW</span>
+              <a href=""><img src="stylefactoryimg/argan_oil_hair_mask_01_370x370_crop_top.jpg" alt=""
+                  class="d-block"></a>
+            </div>
+            <div class="SmallSaleTxt">
+              <a href="" class="SmallSaleTxtThemeTxt">
+                <h4>Argan Oil Hair Mask</h4>
+              </a>
+              <p class="SmallSaleContent">We know that some hair seems to be bad-tempered For saving your time, please
+                use
+                filters: brand, concerns, formulation, ingredient preferences, siz...</p>
+              <p class="Money">$60.00</p>
+              <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye">
+                <a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="SaletGroup">
+            <div class="SaleImg">
+              <span class="LineNew">NEW</span>
+              <span class="Perenct">-10%</span>
+              <a href=""><img src="stylefactoryimg/garnier_fructis_01_370x370_crop_top.jpg" alt="" class="d-block"></a>
+            </div>
+            <div class="SmallSaleTxt SmallSaleTxtLine">
+              <a href="" class="SmallSaleTxtThemeTxt">
+                <h4>Garnier Fructis</h4>
+              </a>
+              <p class="SmallSaleContent">Hairspray and Styling Products Coco Chanel said that a woman who cuts her hair
+                is about to change her life. We’ll add that a woman who does anythin...</p>
+              <span class="From">From</span>
+              <span class="Money">$90.00</span>
+              <p class="LineMoney">$100.00</p>
+              <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye"><a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="SaletGroup">
+            <div class="SaleImg">
+              <span class="RNew">NEW</span>
+              <a href=""><img src="stylefactoryimg/herbal_essences_01_370x370_crop_top.jpg" alt="" class="d-block"></a>
+            </div>
+            <div class="SmallSaleTxt">
+              <a href="" class="SmallSaleTxtThemeTxt">
+                <h4>Herbal Essencess</h4>
+              </a>
+              <p class="SmallSaleContent">Hairspray and Styling Products Coco Chanel said that a woman who cuts her hair
+                is about to change her life. We’ll add that a woman who does anythin...</p>
+              <p class="Money">$80.00</p>
+              <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye"><a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="SaletGroup">
+            <div class="SaleImg">
+              <span class="BNew">NEW</span>
+              <span class="Perenct">-10%</span>
+              <a href=""><img src="stylefactoryimg/l_oreal_paris_studio_line_1_370x370_crop_top.jpg" alt=""
+                  class="d-block"></a>
+            </div>
+            <div class="SmallSaleTxt SmallSaleTxtLine">
+              <a href="" class="SmallSaleTxtThemeTxt">
+                <h4>L'Oreal Paris Studio Line</h4>
+              </a>
+              <p class="SmallSaleContent">We know that some hair seems to be bad-tempered For saving your time, please
+                use
+                filters: brand, concerns, formulation, ingredient preferences, siz...</p>
+              <span class="From">From</span>
+              <span class="Money">$90.00</span>
+              <p class="LineMoney">$100.00</p>
+              <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye"><a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="Sale">
-    <h3 class="SaleThemeTxt"><strong>PRODUCTS</strong> ON SALE</h3>
-    <div class="row no-gutters">
-      <div class="col-12 col-md-3">
-        <div class="SaletGroup">
-          <div class="SaleImg">
-            <span>NEW</span>
-            <img src="stylefactoryimg/argan_oil_hair_mask_01_370x370_crop_top.jpg" alt="" class="d-block">
+    <div class="See">
+      <h3><strong>SEE</strong> WHAT'S NEW ON OUR BLOG</h3>
+      <div class="row no-gutters">
+        <div class="col-12 col-md-4">
+          <div class="SeeGroup">
+            <div class="Month">
+              <div class="rectangle"></div>
+              <h4>14 JANUARY</h4>
+              <p>Posted by David Braun 。2 Comments</p>
+            </div>
           </div>
-          <div class="SmallSaleTxt">
-            <h4>Argan Oil Hair Mask</h4>
-            <p class="SmallSaleContent">We know that some hair seems to be bad-tempered For saving your time, please use
-              filters: brand, concerns, formulation, ingredient preferences, siz...</p>
-            <p class="Money">$60.00</p>
-            <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
-              <span>Add to cart</span></a>
-            <div class="HeartEye">
-              <a href="#"><i class="far fa-heart heart"></i></a>
-              <a href="#"><i class="far fa-eye eye"></i></a></div>
+          <div class="SeeImg">
+            <img src="stylefactoryimg/blog3_a7f4371f-e5f2-46ae-a3c0-01ff3da3296e_536x272_crop_top.jpg" alt=""
+              class="d-block w-100">
           </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="SaletGroup">
-          <div class="SaleImg">
-            <span class="LineNew">NEW</span>
-            <img src="stylefactoryimg/garnier_fructis_01_370x370_crop_top.jpg" alt="" class="d-block">
-          </div>
-          <div class="SmallSaleTxt">
-            <h4>Garnier Fructis</h4>
-            <p class="SmallSaleContent">Hairspray and Styling Products Coco Chanel said that a woman who cuts her hair
-              is about to change her life. We’ll add that a woman who does anythin...</p>
-            <span class="From">From</span>
-            <span class="Money">$90.00</span>
-            <p class="LineMoney">$100.00</p>
-            <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
-              <span>Add to cart</span></a>
-            <div class="HeartEye"><a href="#"><i class="far fa-heart heart"></i></a>
-            <a href="#"><i class="far fa-eye eye"></i></a></div>
+          <div class="SEEContent">
+            <h4>You bring beauty to the world</h4>
+            <p>Coco Chanel said that a woman who cuts her hair is about...</p>
+            <a href="#">Read more</a>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="SaletGroup">
-          <div class="SaleImg">
-            <span class="RbNew">NEW</span>
-            <img src="stylefactoryimg/herbal_essences_01_370x370_crop_top.jpg" alt="" class="d-block">
-          </div>
-          <div class="SmallSaleTxt">
-            <h4>Herbal Essencess</h4>
-            <p class="SmallSaleContent">Hairspray and Styling Products Coco Chanel said that a woman who cuts her hair
-              is about to change her life. We’ll add that a woman who does anythin...</p>
-            <p class="Money">$80.00</p>
-            <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
-              <span>Add to cart</span></a>
-            <div class="HeartEye"><a href="#"><i class="far fa-heart heart"></i></a>
-            <a href="#"><i class="far fa-eye eye"></i></a></div>
+        <div class="col-12 col-md-4">
+          <div class="SeeGroup">
+            <div class="Month">
+              <div class="rectangle"></div>
+              <h4>14 JANUARY</h4>
+              <p>Posted by David Braun 0 Comments</p>
+            </div>
+            <div class="SeeImg">
+              <img src="stylefactoryimg/blog2_536x272_crop_top.jpg" alt="" class="d-block w-100">
+            </div>
+            <div class="SEEContent">
+              <h4>Of best hair products here</h4>
+              <p>Whoever you are, a professional hair stylist or a person who professionally...</p>
+              <a href="#">Read more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="SaletGroup">
-          <div class="SaleImg">
-            <span class="RbNew">NEW</span>
-            <img src="stylefactoryimg/l_oreal_paris_studio_line_1_370x370_crop_top.jpg" alt="" class="d-block">
-          </div>
-          <div class="SmallSaleTxt">
-            <h4>L'Oreal Paris Studio Line</h4>
-            <p class="SmallSaleContent">We know that some hair seems to be bad-tempered For saving your time, please use
-              filters: brand, concerns, formulation, ingredient preferences, siz...</p>
-            <span class="From">From</span>
-            <span class="Money">$90.00</span>
-            <p class="LineMoney">$100.00</p>
-            <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
-              <span>Add to cart</span></a>
-            <div class="HeartEye"><a href="#"><i class="far fa-heart heart"></i></a>
-            <a href="#"><i class="far fa-eye eye"></i></a></div>
+        <div class="col-12 col-md-4">
+          <div class="SeeGroup">
+            <div class="Month">
+              <div class="rectangle"></div>
+              <h4>14 JANUARY</h4>
+              <p>Posted by David Braun 0 Comments</p>
+            </div>
+            <div class="SeeImg">
+              <img src="stylefactoryimg/blog4_536x272_crop_top.jpg" alt="" class="d-block w-100">
+            </div>
+            <div class="SEEContent">
+              <h4>Of best hair products here</h4>
+              <p>Whoever you are, a professional hair stylist or a person who professionally...</p>
+              <a href="#">Read more</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+    <div class="Feature">
+      <h3 class="FeatureThemeTxt"><strong>FEATURED</strong>PROUDCTS</h3>
+      <div class="row no-gutters">
+        <div class="col-12 col-md-3">
+          <div class="FeaturetGroup">
+            <div class="FeatureImg">
+              <span>NEW</span>
+              <span class="Perenct">-38%</span>
+              <a href="">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/1711/1759/products/infiniti_pro_by_conair_hair_designer_3_in_1_styling_system_01_grande.png?v=1484313055"
+                  alt="" class="d-block">
+              </a>
+            </div>
+            <div class="SmallFeatureTxt">
+              <a href="" class="SmallFeatureTxtTheme">
+                <h4>Infiniti Pro by Conair Hair Designer 3 in 1 Sty...</h4>
+              </a>
+              <p class="SmallFeatureContent">We know that some hair seems to be bad-tempered For saving your time,
+                please
+                use filters: brand, concerns, formulation, ingredient preferences, siz...</p>
+              <div class="MoneyGroup">
+                <span class="Money">$50.00</span>
+                <span class="LineMoney">$80.00<span>
+              </div>
+              <a href="#" class="Shopcart ShopcartLine"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye">
+                <a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="FeaturetGroup">
+            <div class="FeatureImg">
+              <span>NEW</span>
+              <a href="">
+                <img src="stylefactoryimg/instyler_ionic_styler_pro_ceramic_flat_iron_1_370x370_crop_top.jpg" alt=""
+                  class="d-block">
+              </a>
+            </div>
+            <div class="SmallFeatureTxt">
+              <a href="" class="SmallFeatureTxtTheme">
+                <h4>InStyler Ionic Styler Pro Ceramic Flat Iron</h4>
+              </a>
+              <p class="SmallFeatureContent">They will style the hair-do for as long as you need Whoever you are, a
+                professional hair stylist or a person who professionally cares about his hai...</p>
+              <p class="Money">$66.00</p>
+              <div class="Ban"> <span><i class="fas fa-ban"></i></span>
+                <span>Unavailable</span>
+              </div>
+              <div class="HeartEye">
+                <a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="FeaturetGroup">
+            <div class="FeatureImg">
+              <span>NEW</span>
+              <a href="">
+                <img src="stylefactoryimg/jose_eber_wet_dry_flat_iron_straightener_01_370x370_crop_top.jpg" alt=""
+                  class="d-block">
+              </a>
+            </div>
+            <div class="SmallFeatureTxt">
+              <a href="" class="SmallFeatureTxtTheme">
+                <h4>Jose Eber Wet & Dry Flat Iron Straightener</h4>
+              </a>
+              <p class="SmallFeatureContent">Take your hair to a next level with our hair sprays Whoever you are, a
+                professional hair stylist or a person who professionally cares about his hai...</p>
+              <p class="Money">$88.00</p>
+              <a href="#" class="Shopcart"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye">
+                <a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="FeaturetGroup">
+            <div class="FeatureImg">
+              <span>NEW</span>
+              <span class="Perenct">-14%</span>
+              <a href="">
+                <img src="stylefactoryimg/glide_thru_detangler_hair_comb_or_brush_01_370x370_crop_top.jpg" alt=""
+                  class="d-block">
+              </a>
+            </div>
+            <div class="SmallFeatureTxt">
+              <a href="" class="SmallFeatureTxtTheme">
+                <h4>Glide Thru Detangler Hair Comb or Brush</h4>
+              </a>
+              <p class="SmallFeatureContent">Take your hair to a next level with our hair sprays Whoever you are, a
+                professional hair stylist or a person who professionally cares about his hai..</p>
+              <div class="MoneyGroup">
+                <span class="Money">$56.00</span>
+                <span class="LineMoney">$65.00</span>
+              </div>
+              <a href="#" class="Shopcart ShopcartLine"> <span><i class="fas fa-shopping-cart"></i></span>
+                <span>Add to cart</span></a>
+              <div class="HeartEye">
+                <a href="#"><i class="far fa-heart heart"></i></a>
+                <a href="#"><i class="far fa-eye eye"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="FollowConnected">
+    <h3><strong>FOLLOW</strong> US ON INSTAGRAM</h3>
+    <div class="OffersConnected">
+      <div class="Offers">
+        <h4>GET OUR SPECIAL OFFERS</h4>
+        <h5>AND THE ULTIMATE HAIR CARE TIPS & TRICKS!</h5>
+        <div class="SearchSub">
+          <input class="Searchlocal" placeholder="Enter your email" aria-label="Search">
+          <a href="#">Subscrible</a>
+        </div>
+      </div>
+      <div class="Connected">
+        <h4>LET'S STAY CONNECTED</h4>
+        <nav class="HrefContactEnd">
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-youtube"></i></a>
+          <a href=""><i class="fab fa-pinterest"></i></a>
+          <a href=""><i class="fab fa-google-plus-g"></i></a>
+        </nav>
+      </div>
+    </div>
   </div>
+
+  <div class="FullDevelopment"></div>
+
+  <div class="EndNavGroup">
+    <div class="row">
+      <div class="col-12 col-md-3">
+        <div class="NavLogo">
+          <a href="">
+            <img src="https://cdn.shopify.com/s/files/1/1711/1759/t/2/assets/footer_logo.png?v=15429984064853762523"
+              alt="">
+          </a>
+          <p>This web store was originally launched in 2002 and was then titled the Style Factory. This name was a
+            perfect fit then, simply because we’ve always had our focus on our hair care & hair treatment products
+            lineup.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="NavCate">
+          <h3>CATEGORIES</h3>
+          <nav>
+            <a href="">
+              <p>Hair Styling</p>
+            </a>
+            <a href="">
+              <p>Men’s Hair Care</p>
+            </a>
+            <a href="">
+              <p>Hair Care For Kids</p>
+            </a>
+            <a href="">
+              <p>Hair Health</p>
+            </a>
+            <a href="">
+              <p>Treatment</p>
+            </a>
+            <a href="">
+              <p>Featured Products</p>
+            </a>
+            <a href="">
+              <p>Sale</p>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="NavMenu">
+          <h3>MENU</h3>
+          <nav>
+            <a href="">
+              <p>Home</p>
+            </a>
+            <a href="">
+              <p>Catalog</p>
+            </a>
+            <a href="">
+              <p>About Us</p>
+            </a>
+            <a href="">
+              <p>Contact Us</p>
+            </a>
+            <a href="">
+              <p>Wishlist</p>
+            </a>
+            <a href="">
+              <p>Sitemap</p>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="NavContact">
+          <h3>CONTACT INFORMATION</h3>
+          <address>
+            <p>4578 Marmora Road, Glasgow D04 89GR
+              1(234) 567-9842</p>
+            <a href="">
+              <p class="mail">
+                info@demolink.org
+              </p>
+            </a>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="FooterTxt">© 2020 Style Factory. All rights reserved.
+      <span><a href="#">Powered by Shopify</a></span></div>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
