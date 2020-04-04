@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .group {
+            text-align: center;
+        }
+
+        #hundred {
+            font-size: 30px;
+        }
+
+        .hundredgroup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        #pronumber {
+            color: white;
+            background-color: blue;
+            font-size: 30px;
+            padding: 10px 10px;
+            display: inline-block;
+            margin: 15px 0;
+        }
+
+        /* .pronumbergroup{
+            background-color: blue;
+        } */
+        button {
+            margin-top: 10px;
+            padding: 0 10px;
+            font-size: 30px;
+            color: white;
+            background-color: black;
+        }
+
+        .Xred {
+            color: red;
+        }
+
+        .Vgreen {
+            color: green;
+        }
+
+        #textinput {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <div class="hundredgroup">
+            <label for="" id="hundred"></label><br />
+        </div>
+        <div class="pronumbergroup">
+            <button id="pronumber" onclick="numberpro()">產生數字</button><br />
+        </div>
+        <input type="text" id="textinput"><br />
+        <button id="one" onclick="onepress()">1</button>
+        <button id="two" onclick="twopress()">2</button>
+        <button id="three" onclick="threepress()">3</button><br />
+        <button id="four" onclick="fourpress()">4</button>
+        <button id="five" onclick="fivepress()">5</button>
+        <button id="six" onclick="sixpress()">6</button><br />
+        <button id="seven" onclick="sevenpress()">7</button>
+        <button id="eight" onclick="eightpress()">8</button>
+        <button id="nine" onclick="ninepress()">9</button><br />
+        <button class="Xred" onclick="reset()">X</button>
+        <button id="zero" onclick="zeropress()">0</button>
+        <button class="Vgreen" onclick="confirm()">V</button>
+        <div id="abc"></div>
+    </div>
+    <script>
+        var abc = document.getElementById("abc");
+
+
+        var numberresult = "";
+
+        var hundred = document.getElementById("hundred");
+        var pronumber = document.getElementById("pronumber");
+        var one = document.getElementById("one");
+        var textinput = document.getElementById("textinput");
+
+        var maxnumber = 100;
+        var minnumber = 0;
+        hundred.innerHTML = minnumber + "~" + maxnumber;
+
+        function numberpro() {
+            let resultnumber = Math.floor(Math.random() * 100);
+            // return resultnumber;
+            // hundred.innerHTML=resultnumber;
+            abc.innerHTML = resultnumber;
+            numberresult = resultnumber;
+            hundred.innerHTML = 0 + "~" + 100;
+        }
+
+        // var numberresult=numberpro();
+
+        var numberresult = "";
+
+        function onepress() {
+            textinput.value += "1";
+        };
+
+        function twopress() {
+            textinput.value += "2";
+        }
+
+        function threepress() {
+            textinput.value += "3";
+        }
+
+        function fourpress() {
+            textinput.value += "4";
+        }
+
+        function fivepress() {
+            textinput.value += "5";
+        }
+
+        function sixpress() {
+            textinput.value += "6";
+        }
+
+        function sevenpress() {
+            textinput.value += "7";
+        }
+
+        function eightpress() {
+            textinput.value += "8";
+        }
+
+        function ninepress() {
+            textinput.value += "9";
+        }
+
+        function zeropress() {
+            textinput.value += "0";
+        };
+
+        function reset() {
+            textinput.value = "";
+        }
+
+        function confirm() {
+            if (numberresult != "") {
+                if (parseInt(textinput.value) >= 0 && parseInt(textinput.value) <= 100) {
+                    if (textinput.value > numberresult) {
+                        maxnumber = textinput.value;
+                        hundred.innerHTML = `${minnumber}~${maxnumber}`;
+                    } else if (textinput.value < numberresult) {
+                        minnumber = textinput.value;
+                        hundred.innerHTML = `${minnumber}~${maxnumber}`;
+                    } else {
+                        alert(`"數字是${textinput.value}，恭喜猜對了，遊戲結束"`);
+                        numberpro();
+                        reset();
+                        hundred.innerHTML = 0 + "~" + 100;
+                    }
+                }
+                else{
+                    alert("請輸入0到100")
+                }
+            } else {
+                alert("請產生亂數");
+            }
+        }
+    </script>
+</body>
+
+</html>
