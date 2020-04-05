@@ -85,10 +85,10 @@
         <button class="Xred" onclick="reset()">X</button>
         <button id="zero" onclick="zeropress()">0</button>
         <button class="Vgreen" onclick="confirm()">V</button>
-        <div id="abc"></div>
+        <!-- <div id="abc"></div> -->
     </div>
     <script>
-        var abc = document.getElementById("abc");
+        // var abc = document.getElementById("abc");
 
 
         var numberresult = "";
@@ -106,9 +106,11 @@
             let resultnumber = Math.floor(Math.random() * 100);
             // return resultnumber;
             // hundred.innerHTML=resultnumber;
-            abc.innerHTML = resultnumber;
+            // abc.innerHTML = resultnumber;
             numberresult = resultnumber;
             hundred.innerHTML = 0 + "~" + 100;
+            maxnumber = 100;
+            minnumber = 0;
         }
 
         // var numberresult=numberpro();
@@ -160,8 +162,9 @@
         }
 
         function confirm() {
-            if (numberresult != "") {
-                if (parseInt(textinput.value) >= 0 && parseInt(textinput.value) <= 100) {
+            // if(textinput.value>minnumber||textinput.value<maxnumber){
+                if (numberresult != "") {
+                if (parseInt(textinput.value) >= minnumber && parseInt(textinput.value) <= maxnumber) {
                     if (textinput.value > numberresult) {
                         maxnumber = textinput.value;
                         hundred.innerHTML = `${minnumber}~${maxnumber}`;
@@ -176,11 +179,14 @@
                     }
                 }
                 else{
-                    alert("請輸入0到100")
+                    alert(`請輸入${minnumber}到${maxnumber}的數字`)
                 }
             } else {
                 alert("請產生亂數");
             }
+            textinput.value = ""
+            // }
+           
         }
     </script>
 </body>
