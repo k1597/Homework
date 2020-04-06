@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .group {
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 0 10px;
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+        }
+        .buttongroup {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #textinput {
+            width: 250px;
+            height: 30px;
+            font-size: 30px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="group">
+        <div class="calgr">
+            <div class="buttongroup">
+                <table>
+                    <tr>
+                        <td colspan="5">
+                            <input type="text" id="textinput"><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button value="7" onclick="getnumber(this)">7</button>
+                        </td>
+                        <td>
+                            <button value="8" onclick="getnumber(this)">8</button>
+                        </td>
+                        <td>
+                            <button value="9" onclick="getnumber(this)">9</button>
+                        </td>
+                        <td>
+                            <button value="/" onclick="calculatingsigns(this)">/</button>
+                        </td>
+                        <td>
+                            <button onclick="deletepress()">AC</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button  value="4" onclick="getnumber(this)">4</button>
+                        </td>
+                        <td>
+                            <button value="5" onclick="getnumber(this)">5</button>
+                        </td>
+                        <td>
+                            <button value="6" onclick="getnumber(this)">6</button>
+                        </td>
+                        <td>
+                            <button value="*" onclick="calculatingsigns(this)">*</button><br />
+                        </td>
+                        <td>
+                            <button value="√" onclick="calculatingsigns(this)">√</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button value="1" onclick="getnumber(this)">1</button>
+                        </td>
+                        <td>
+                            <button value="2" onclick="getnumber(this)">2</button>
+                        </td>
+                        <td>
+                            <button value="3" onclick="getnumber(this)">3</button>
+                        </td>
+                        <td>
+                            <button value="-" onclick="calculatingsigns(this)">-</button><br />
+                        </td>
+                        <td>
+                            <button value="x2" onclick="calculatingsigns(this)">x2</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button value="0" onclick="getnumber(this)">0</button>
+                        </td>
+                        <td>
+                            <button value="." onclick="getnumber(this)">.</button>
+                        </td>
+                        <td>
+                            <button onclick="equalpress()">=</button>
+                        </td>
+                        <td>
+                            <button value="+" onclick="calculatingsigns(this)">+</button><br />
+                        </td>
+                        <td>
+                            <button onclick="delsigns()">DEL</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var sign="";
+        var beforenumber;
+        var textinput = document.getElementById("textinput");
+        function getnumber(number){
+            textinput.value+=number.value;
+        }
+        function calculatingsigns(signs){
+            beforenumber=parseFloat(textinput.value);
+            // textinput.value+=signs.value;
+            sign=signs.value;
+            textinput.value="";
+        }
+        function deletepress() {
+            textinput.value = "";
+        }
+        function delsigns(){
+            var textinputvalue=textinput.value;
+            var laststr=textinputvalue.substring(0,textinputvalue.length-1);
+            textinput.value=laststr;
+        }
+        function equalpress() {
+            if(textinput.value!=""){
+                if(sign=="+"){
+                textinput.value=beforenumber+parseFloat(textinput.value);
+            }
+            else if(sign=="-"){
+                textinput.value=beforenumber-parseFloat(textinput.value);
+            }
+            else if(sign=="*"){
+                textinput.value=beforenumber*parseFloat(textinput.value);
+            }
+            else if(sign=="/"){
+                textinput.value=beforenumber/parseFloat(textinput.value);
+            }
+            else if(sign=="√"){
+                textinput.value=Math.sqrt(parseFloat(textinput.value));
+            }
+            else if(sign=="x2"){
+                textinput.value=Math.pow((parseFloat(textinput.value)),2);
+            }
+            }
+            // else{
+            //     textinput.value=eval(textinput.value);
+            // }
+        }
+    </script>
+</body>
+
+</html>
