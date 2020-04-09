@@ -192,6 +192,7 @@
             },
             watch: {}
         };
+        var one=true;
         var colorp = document.getElementById('colorp');
         var colordiv = document.getElementById("colordiv");
         var Group = document.getElementById("Group");
@@ -219,6 +220,7 @@
         }
 
         function buttoniphone() {
+            if(one){
             colorbuttona = document.createElement('button');
             colorbuttonb = document.createElement('button');
             colorbuttonc = document.createElement('button');
@@ -236,6 +238,8 @@
             specificationbutton2=specificationgroup(products.iphone.p01.storage.storage128g,products.iphone.p01.price.price128g,products.iphone.p01.price.price128g);
             specificationbutton3=specificationgroup(products.iphone.p01.storage.storage256g,products.iphone.p01.price.price256g,products.iphone.p01.price.price256g);
             pricetxt.innerText="價格";
+            one=false;
+            }
         };
 
         function changeimg(colorbutton, picture) {
