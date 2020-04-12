@@ -13,43 +13,53 @@
             padding: 0;
             list-style: none;
         }
+
         .Groupa {
             display: flex;
         }
-        .colorspecificationdiv{
+
+        .colorspecificationdiv {
             order: 1;
             margin-left: 100px;
         }
-        #colorp{
+
+        #colorp {
             font-size: 30px;
         }
-        #specification{
-            font-size: 30px;
-            margin-top: 30px;
-        }
-        #pricetxt{
+
+        #specification {
             font-size: 30px;
             margin-top: 30px;
         }
-        #price1{
+
+        #pricetxt {
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        #price1 {
             font-size: 35px;
             font-weight: 600;
         }
-        .Groupa button{
+
+        .Groupa button {
             border: 1px solid black;
             background-color: transparent;
             font-size: 15px;
             margin: 0 10px;
-            cursor:pointer;
+            cursor: pointer;
             padding: 30px;
         }
-        .Groupa button:hover{
+
+        .Groupa button:hover {
             background-color: aliceblue;
         }
-        .Groupa i{
+
+        .Groupa i {
             font-size: 50px;
         }
-        #colordiv button{
+
+        #colordiv button {
             margin: 0 15px;
         }
     </style>
@@ -58,7 +68,7 @@
 <body>
     <div id="Attributes1div">
         <button onclick="buttoniphone()">iphone</button>
-        <button>ipad</button>
+        <button onclick="buttonipad()">ipad</button>
         <button>Mac</button>
         <div id="Group" class="Groupa">
             <div class="colorspecificationdiv">
@@ -146,17 +156,17 @@
                     color: "顏色",
                     specification: "規格"
                 },
-                ipadgray: {
+                ipadSpacegray: {
                     color: '太空灰色',
-                    pic: 'ipad-wifi-select-space-201909_GEO_TW.png',
+                    pic: 'phoneimg/ipad-wifi-select-space-201909_GEO_TW.png',
                 },
                 ipadgray: {
                     color: '銀色',
-                    pic: 'ipad-wifi-select-silver-201909_GEO_TW.png',
+                    pic: 'phoneimg/ipad-wifi-select-silver-201909_GEO_TW.png',
                 },
-                ipadgray: {
+                ipadgold: {
                     color: '金色',
-                    pic: 'ipad-wifi-select-gold-201909_GEO_TW.png',
+                    pic: 'phoneimg/ipad-wifi-select-gold-201909_GEO_TW.png',
                 },
                 price: {
                     price32g: "NT$10,900",
@@ -173,11 +183,11 @@
                     color: "顏色",
                     specification: "規格"
                 },
-                ipadSpacegray: {
+                macSpacegray: {
                     color: '太空灰色',
                     pic: 'mbp13touch-space-select-201807_GEO_TW.png',
                 },
-                ipadgray: {
+                macgray: {
                     color: '灰色',
                     pic: 'mbp13touch-silver-select-201807_GEO_TW.png',
                 },
@@ -192,7 +202,9 @@
             },
             watch: {}
         };
-        var one=true;
+        var one = 1;
+        var two = 3;
+        var iphonenumber = 5;
         var colorp = document.getElementById('colorp');
         var colordiv = document.getElementById("colordiv");
         var Group = document.getElementById("Group");
@@ -200,10 +212,12 @@
         var colorbuttona;
         var colorbuttonb;
         var colorbuttonc;
-        var specificationdiv=document.getElementById("specificationdiv");
+        var colorspecificationdiv=document.getElementsByClassName("colorspecificationdiv")[0];
+        var specificationdiv = document.getElementById("specificationdiv");
         var specificationbutton;
         var specificationbutton2;
         var specificationbutton3;
+
         function btnCreate(circleColor, color, tatget) {
             var circle = document.createElement('i');
             circle.classList.add("fas");
@@ -216,62 +230,91 @@
             tatget.appendChild(circle);
             tatget.appendChild(colorP);
             colordiv.appendChild(tatget);
+            colorspecificationdiv.appendChild(colordiv);
             // colordiv.innerHTML=tatget.outerHTML;
         }
 
         function buttoniphone() {
-            if(one){
-            colorbuttona = document.createElement('button');
-            colorbuttonb = document.createElement('button');
-            colorbuttonc = document.createElement('button');
-            mainimg.setAttribute("src", products.iphone.mainscreen.mainpic);
-            Group.appendChild(mainimg);
-            colorp.innerHTML = products.iphone.mainscreen.color;
-            btnCreate("red", "紅色", colorbuttona);
-            btnCreate("black", "黑色", colorbuttonb);
-            btnCreate("yellow", "黃色", colorbuttonc);
-            changeimg(colorbuttona,products.iphone.p01.pic);
-            changeimg(colorbuttonb,products.iphone.p02.pic);
-            changeimg(colorbuttonc,products.iphone.p03.pic);
-            specification.innerHTML="規格";
-            specificationbutton = specificationgroup(products.iphone.p01.storage.storage64g,products.iphone.p01.price.price64g,products.iphone.p01.price.price64g);
-            specificationbutton2=specificationgroup(products.iphone.p01.storage.storage128g,products.iphone.p01.price.price128g,products.iphone.p01.price.price128g);
-            specificationbutton3=specificationgroup(products.iphone.p01.storage.storage256g,products.iphone.p01.price.price256g,products.iphone.p01.price.price256g);
-            pricetxt.innerText="價格";
-            one=false;
+            if (one == 1) {
+                colorspecificationdiv.innerHTML="";
+                mainimg.setAttribute("src", products.iphone.mainscreen.mainpic);
+                Group.appendChild(mainimg);
+                colorp.innerHTML = products.iphone.mainscreen.color;
+                    colorbuttona = document.createElement('button');
+                    colorbuttonb = document.createElement('button');
+                    colorbuttonc = document.createElement('button');
+                    btnCreate("red", "紅色", colorbuttona);
+                    btnCreate("black", "黑色", colorbuttonb);
+                    btnCreate("yellow", "黃色", colorbuttonc);
+                    specificationbutton = specificationgroup(products.iphone.p01.storage.storage64g, products.iphone.p01
+                        .price.price64g, products.iphone.p01.price.price64g);
+                    specificationbutton2 = specificationgroup(products.iphone.p01.storage.storage128g, products.iphone
+                        .p01.price.price128g, products.iphone.p01.price.price128g);
+                    specificationbutton3 = specificationgroup(products.iphone.p01.storage.storage256g, products.iphone
+                        .p01.price.price256g, products.iphone.p01.price.price256g);
+                changeimg(colorbuttona, products.iphone.p01.pic);
+                changeimg(colorbuttonb, products.iphone.p02.pic);
+                changeimg(colorbuttonc, products.iphone.p03.pic);
+                specification.innerHTML = "規格";
+                pricetxt.innerText = "價格";
+                one = 2;
+                two = 3;
             }
         };
+        function buttonipad() {
+            if (two == 3) {
+                colorspecificationdiv.innerHTML="";
+                colorbuttona = document.createElement('button');
+                colorbuttonb = document.createElement('button');
+                colorbuttonc = document.createElement('button');
+                mainimg.setAttribute("src", products.ipad.mainscreen.mainpic);
+                Group.appendChild(mainimg);
+                colorp.innerHTML = products.iphone.mainscreen.color;
+                btnCreate("rgb(70, 66, 66)", "太空灰色", colorbuttona);
+                btnCreate("rgb(150, 147, 147)", "銀色", colorbuttonb);
+                btnCreate("rgb(211, 188, 157)", "金色", colorbuttonc);
+                specificationbutton = specificationgroup(products.ipad.storage.storage32g, products.ipad.price.price32g, products.ipad.price.price32g);
+                specificationbutton2 = specificationgroup(products.ipad.storage.storage128g, products.ipad.price.price128g, products.ipad.price.price128g);
+                changeimg(colorbuttona, products.ipad.ipadSpacegray.pic);
+                changeimg(colorbuttonb, products.ipad.ipadgray.pic);
+                changeimg(colorbuttonc, products.ipad.ipadgold.pic);
+                specification.innerHTML = "規格";
+                pricetxt.innerText = "價格";
+                two = 4;
+                one = 1;
+            }
+        };
+
+
+
+
 
         function changeimg(colorbutton, picture) {
             colorbutton.addEventListener("click", function () {
                 mainimg.setAttribute("src", picture);
             });
         };
-        function specificationgroup(specificationtxt,price,totalprice){
+
+        function specificationgroup(specificationtxt, price, totalprice) {
             var button = document.createElement('button');
             var specification = document.createElement("p");
             var specificationprice = document.createElement("p");
-            specification.innerHTML=specificationtxt;
-            specificationprice.innerHTML=price;
+            specification.innerHTML = specificationtxt;
+            specificationprice.innerHTML = price;
             button.appendChild(specification);
             button.appendChild(specificationprice);
             specificationdiv.appendChild(button);
-
-
+            colorspecificationdiv.appendChild(specificationdiv);
             button.addEventListener("click", function () {
-            price1.innerText = totalprice;
-        });
+                price1.innerText = totalprice;
+                colorspecificationdiv.appendChild(price1);
+            });
             return button;
         };
-        var specificationbutton
-        var specification=document.getElementById("specification");
-        var pricetxt=document.getElementById("pricetxt");
-        var price1=document.getElementById("price1");
-        // function getprice(button,totalprice){
-        //     button.addEventListener("click", function () {
-        //     price.innerText = totalprice;
-        // });
-        // }
+        // var specificationbutton;
+        var specification = document.getElementById("specification");
+        var pricetxt = document.getElementById("pricetxt");
+        var price1 = document.getElementById("price1");
     </script>
 </body>
 
