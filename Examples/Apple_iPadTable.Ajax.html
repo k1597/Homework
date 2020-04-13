@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tableid {
+            width: 100%;
+        }
+        table,tr,th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <table id="tableid" border="1"></table> -->
+    <h1>Apple iPad</h1>
+    <div id="msg"></div>
+    <script>
+        var body=document.getElementsByTagName("body")[0];
+        var table = document.createElement("table");
+        var td = document.createElement("td");
+        var thead = document.createElement("thead");
+        var tr = document.createElement("tr");
+        var titlearray = ["編號", "價錢", "容量", "描述","照片"];
+        let ipad="";
+        window.onload=function(){ 
+            let xhr=new XMLHttpRequest();
+            xhr.onload=function(){
+                if(xhr.readyState==4&&xhr.status==200){           
+                // docmsg.textContent=this.responseText;
+                // document.getElementById("msg").innerHTML=this.responseText;
+                ipad=JSON.parse(this.responseText);
+                addTbody();
+            }
+                else{
+                    msg.textContent="發生錯誤,HTTP response代碼:"+xhr.status;
+                }
+            }
+            xhr.open("GET","http://127.0.0.1:5501/AjaxExamplesLite/Examples/ipad.json");
+            xhr.send();
+            function addThead(titlesArray) {
+            // for (let x in ipad[0]) {
+            //     var tr = document.createElement("tr");
+            //     var th = document.createElement("th");
+            //     th.innerHTML = x;
+            //     tr.appendChild(th);
+            //     table.appendChild(thead);
+            //     thead.appendChild(tr);
+            //     body.appendChild(table);
+            // }
+            titlesArray.forEach(function (value) {
+                var th = document.createElement("th");
+                th.innerHTML = value;
+                tr.appendChild(th);
+                table.appendChild(thead);
+                thead.appendChild(tr);
+                 body.appendChild(table);
+            });
+        }
+        addThead(titlearray);
+
+        // addTbody();
+
+        function addTbody() {
+            var tbody = document.createElement("tbody");
+            for (let i of ipad) {
+                var tr = document.createElement("tr");
+                var skutext = document.createElement("td");
+                var pricetext = document.createElement("td");
+                var storagetext = document.createElement("td");
+                var descriptiontext = document.createElement("td");
+                var picturetext = document.createElement("td");
+                skutext.innerText=i.sku;
+                pricetext.innerText=i.price;
+                storagetext.innerText=i.storage;
+                descriptiontext.innerText=i.description;
+                picturetext.innerHTML=i.picture;
+                tr.appendChild(skutext);
+                tbody.appendChild(tr);
+                table.appendChild(tbody);
+                tr.appendChild(pricetext);
+                // tbody.appendChild(tr);
+                // table.appendChild(tbody);
+                tr.appendChild(storagetext);
+                // tbody.appendChild(tr);
+                // table.appendChild(tbody);
+                tr.appendChild(descriptiontext);
+                tr.appendChild(picturetext);
+                body.appendChild(table);
+            }
+        }
+    }
+        // let ipad_expensive=ipad.filter(item=>item.prices>15000);
+    </script>
+</body>
+
+</html>
