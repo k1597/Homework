@@ -1,0 +1,145 @@
+[
+{
+    "img":"heroimggroup/RiotX_ChampionList_darius.jpg",
+    "Name":"諾克薩斯之力 達瑞斯 ",
+    "life":"生命：582.24 (+100 每級)",
+    "Physicalattack":"物理攻擊：64 (+5 每級)",
+    "Physicaldefense":"物理防禦：39 (+4 每級)"
+},
+{
+
+    "img":"heroimggroup/RiotX_ChampionList_diana.jpg",
+    "Name":"輕藐之月 黛安娜",
+    "life":"生命：594 (+95 每級)",
+    "Physicalattack":"物理攻擊：57.04 (+3 每級)",
+    "Physicaldefense":"物理防禦：31 (+3.6 每級)"
+
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_drmundo.jpg",
+    "Name":"佐恩狂人 蒙多醫生 ",
+    "life":"生命：582.52 (+89 每級)",
+    "Physicalattack":"物理攻擊：61.27 (+3.5 每級)",
+    "Physicaldefense":"物理防禦：36 (+3.5 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_draven.jpg",
+    "Name":"處刑娛樂大師 達瑞文 ",
+    "life":"生命：574 (+88 每級)",
+    "Physicalattack":"物理攻擊：60 (+3.61 每級)",
+    "Physicaldefense":"物理防禦：29 (+3.3 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_ekko.jpg",
+    "Name":"時空少年 艾克 ",
+    "life":"生命：585 (+85 每級)",
+    "Physicalattack":"物理攻擊：58 (+3 每級)",
+    "Physicaldefense":"物理防禦：32 (+3 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_elise.jpg",
+    "Name":"蜘蛛女王 伊莉絲",
+    "life":"生命：534 (+93 每級)",
+    "Physicalattack":"物理攻擊：55 (+3 每級)",
+    "Physicaldefense":"物理防禦：27 (+3.35 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_evelynn.jpg",
+    "Name":"臨終擁抱 伊芙琳 ",
+    "life":"生命：572 (+84 每級)",
+    "Physicalattack":"物理攻擊：61 (+3 每級)",
+    "Physicaldefense":"物理防禦：37 (+3.5 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_ezreal.jpg",
+    "Name":"探險家 伊澤瑞爾 ",
+    "life":"生命：500 (+86 每級)",
+    "Physicalattack":"物理攻擊：60 (+2.5 每級)",
+    "Physicaldefense":"物理防禦：22 (+3.5 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_fiddlesticks.jpg",
+    "Name":"亙古之懼 費德提克",
+    "life":"生命：580.4 (+92 每級)",
+    "Physicalattack":"物理攻擊：55.36 (+2.625 每級)",
+    "Physicaldefense":"物理防禦：34 (+3.5 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_fiora.jpg",
+    "Name":"孤高劍客 菲歐拉",
+    "life":"生命：550 (+85 每級)",
+    "Physicalattack":"物理攻擊：68 (+3.3 每級)",
+    "Physicaldefense":"物理防禦：33 (+3.5 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_fizz.jpg",
+    "Name":"深海頑童 飛斯",
+    "life":"生命：570 (+98 每級)",
+    "Physicalattack":"物理攻擊：58.04 (+3 每級)",
+    "Physicaldefense":"物理防禦：22.412 (+3.4 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_galio.jpg",
+    "Name":"禦國巨像 加里歐",
+    "life":"生命：562 (+112 每級)",
+    "Physicalattack":"物理攻擊：59 (+3.5 每級)",
+    "Physicaldefense":"物理防禦：24 (+3.5 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_gangplank.jpg",
+    "Name":"海洋之災 剛普朗克",
+    "life":"生命：540 (+82 每級)",
+    "Physicalattack":"物理攻擊：64 (+3 每級)",
+    "Physicaldefense":"物理防禦：35 (+3 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_garen.jpg",
+    "Name":"蒂瑪西亞之力 蓋倫",
+    "life":"生命：620 (+84 每級)",
+    "Physicalattack":"物理攻擊：66 (+4.5 每級)",
+    "Physicaldefense":"物理防禦：36 (+3 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_gnar.jpg",
+    "Name":"失落之子 吶兒",
+    "life":"生命：510 (+65 每級)",
+    "Physicalattack":"物理攻擊：55.376 (+3.2 每級)",
+    "Physicaldefense":"物理防禦：47 (+4 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_gragas.jpg",
+    "Name":"酒桶之王 古拉格斯 ",
+    "life":"生命：600 (+95 每級)",
+    "Physicalattack":"物理攻擊：64 (+3.5 每級)",
+    "Physicaldefense":"物理防禦：35 (+3.6 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_graves.jpg",
+    "Name":"亡命之徒 葛雷夫",
+    "life":"生命：555 (+92 每級)",
+    "Physicalattack":"物理攻擊：68 (+3 每級)",
+    "Physicaldefense":"物理防禦：33 (+3.4 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_hecarim.jpg",
+    "Name":"戰爭之影 赫克林",
+    "life":"生命：580 (+90 每級)",
+    "Physicalattack":"物理攻擊：66 (+3.2 每級)",
+    "Physicaldefense":"物理防禦：36 (+4 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_heimerdinger.jpg",
+    "Name":"大發明家 漢默丁格",
+    "life":"生命：488 (+87 每級)",
+    "Physicalattack":"物理攻擊：55.536 (+2.7 每級)",
+    "Physicaldefense":"物理防禦：19.04 (+3 每級)"
+},
+{
+    "img":"heroimggroup/RiotX_ChampionList_illaoi.jpg",
+    "Name":"海妖祭司 伊羅旖",
+    "life":"生命：585.6 (+95 每級)",
+    "Physicalattack":"物理攻擊：68 (+5 每級)",
+    "Physicaldefense":"物理防禦：35 (+3.8 每級)"
+}
+]
+
