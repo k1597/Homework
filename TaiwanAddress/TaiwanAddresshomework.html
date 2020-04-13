@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../TaiwanAddress/taiwanmodules.js"></script>
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Taiwan Address/Zip Code</h1>
+    <div id="msg"></div>
+    <template id="templateRow">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+    <script>
+        var body = $g("body");
+        var table = $c("table");
+        var thead = $c("thead");
+        var tr = $c("tr");
+        var tbody = $c("tbody");
+        let ZipCode = [];
+        var td = $c("td");
+        tbody.appendChild(tr);
+        body.appendChild(table);
+        table.appendChild(tbody);
+        var grouparray = [];
+        window.onload = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    zipcodeArray = JSON.parse(this.responseText);
+                    zipcodeArray.forEach((item, index) => {
+                        let _city = item.CityName;
+                        let _districts = [];
+                        item.AreaList.forEach((item, index) => {
+                            _districts.push({
+                                Districts: item.AreaName,
+                                ZipCode: item.ZipCode
+                            });
+                        });
+                        let _cityObject = {
+                            City: _city,
+                            Districts: _districts
+                        };
+                        ZipCode.push(_cityObject);
+
+                    });
+                    // addTbody(ZipCode);
+                    for (var i = 0; i < ZipCode.length; i++) {
+                        for (var j = 0; j < ZipCode[i].Districts.length; j++) {
+                            let _cityx = ZipCode[i].City;
+                            let _Districtsx = ZipCode[i].Districts[j].Districts;
+                            let _ZipCodex = ZipCode[i].Districts[j].ZipCode;
+                            let _groupObject = {
+                                City: _cityx,
+                                Districts: _Districtsx,
+                                ZipCode: _ZipCodex
+                            };
+                            grouparray.push(_groupObject);
+                        }
+                    }
+                    grouparray.forEach(item => {
+                        addTbody(Object.values(item))
+                    });
+                } else {
+                    msg.textContent = "發生錯誤,HTTP response代碼:" + xhr.status;
+                }
+            }
+            xhr.open("GET", "http://127.0.0.1:5501/TaiwanAddress/TaiwanAddress.json");
+            xhr.send();
+
+        };
+
+
+
+        function addTbody(rowArray) {
+            let templateRow = $g("#templateRow");
+            let cloneContent = templateRow.content.cloneNode(true);
+            let tds = cloneContent.querySelectorAll("td");
+            tds[0].textContent = rowArray[0];
+            tds[1].textContent = rowArray[1];
+            tds[2].textContent =rowArray[2];
+            tbody.appendChild(cloneContent);
+        }
+    </script>
+</body>
+
+</html>
