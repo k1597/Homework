@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: 100%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<body>
+  <div id="map"></div>
+  <script>
+    let maskgroup = [];
+    var map;
+
+    function GetData() {
+      $.ajax({
+        type: "GET",
+        url: "https://findmasks.herokuapp.com/places",
+        dataType: "json",
+        success: function (response) {
+          response.features.forEach((item, index) => {
+            let _name = item.properties.name;
+            let _address = item.geometry.coordinates;
+            let _masksLeft = item.properties.masksLeft;
+            let _childMasksLeft = item.properties.childMasksLeft;
+            let Maskitem = {
+              itemName: _name,
+              itemaddress: _address,
+              itemmaskleft: _masksLeft,
+              itemchildmaskleft: _childMasksLeft
+            };
+            maskgroup.push(Maskitem);
+
+          });
+          for (var i = 0; i < maskgroup.length; i++) {
+            if (maskgroup[i].itemmaskleft > 0 || maskgroup[i].itemchildmaskleft > 0) {
+              iCon= 'smile.png'
+            }
+            else{
+              iCon= 'crying.png'
+            }
+            var titletext=`${maskgroup[i].itemName}，大人口罩:${maskgroup[i].itemmaskleft}個,小孩口罩${maskgroup[i].itemchildmaskleft}個`;
+
+            var marker = new google.maps.Marker({
+              position: {
+                lat: maskgroup[i].itemaddress[1],
+                lng: maskgroup[i].itemaddress[0]
+              },
+              map: map,
+              title: `${titletext}`,
+              icon: `${iCon}`,
+            });
+          }
+        }
+      });
+    }
+    function initMap() {
+      var myLatLng = {
+        lat: 24.7571467,
+        lng: 120.9522139
+      };
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatLng
+      });
+      GetData();
+
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlKWP4uWjQIR3WDAWLAu6rUhBfc3_ppag&callback=initMap"
+    async defer></script>
+</body>
+
+</html>
