@@ -107,10 +107,10 @@
                 url: "https://raw.githubusercontent.com/k1597/Homework/master/LOL/lol.json",
                 dataType: "json",
                 success: function (response) {
-                    lolarray.push(response);
-                    for (let i = 0; i < lolarray[0].length; i++) {
-                        Importdata(i, lolarray[0][i].img, lolarray[0][i].Name, lolarray[0][i].Name,
-                            lolarray[0][i].life, lolarray[0][i].Physicalattack, lolarray[0][i]
+                    lolarray=response;
+                    for (let i = 0; i < lolarray.length; i++) {
+                        Importdata(i, lolarray[i].img, lolarray[i].Name, lolarray[i].Name,
+                            lolarray[i].life, lolarray[i].Physicalattack, lolarray[i]
                             .Physicaldefense);
                     }
                 }
