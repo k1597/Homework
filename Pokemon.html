@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        h1,button{
+            font-family: Microsoft JhengHei;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>寶可夢圖鑑列表</h1>
+    <button id='addone'>按一次加一</button>
+    <button id='removeone'>按一次減一</button>
+    <button id='loadall'>全部展開</button>
+    <div id="container"></div>
+
+
+        <script>
+            var i;
+            function addpokemon(x){
+                let img = document.createElement("img");
+                let no = x.toString().padStart(3, "0");
+                $(img).attr("src", `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${no}.png`);
+                container.append(img);
+                
+                if(x=i){
+                    img.addEventListener("click",removeImg);
+                }
+                
+            }
+            var index = 1;
+            $("#addone").click(function () {
+                addpokemon(index)
+                index++;
+            })
+            $("#removeone").click(function () {
+                let less = container.childNodes.length;
+                if (less > 0) {
+                    container.removeChild(container.childNodes[less - 1]);
+                }
+            })
+            $("#loadall").click(function(){
+                for(i=1;i<890;i++){
+                 addpokemon(i)  
+            }
+            })
+
+            function removeImg(event){
+            container.removeChild(event.target);
+        }
+        </script>
+</body>
+
+</html>
