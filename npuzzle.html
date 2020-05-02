@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .puzzle {
+            width: 600px;
+            height: 600px;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .puzzle div {
+            width: 146px;
+            height: 146px;
+            border: 2px solid rgb(143, 143, 150);
+            background-image: url(https://picsum.photos/600/600);
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .row1 {
+            top: 0;
+        }
+
+        .row2 {
+            top: 150px;
+        }
+
+        .row3 {
+            top: 300px;
+        }
+
+        .row4 {
+            top: 450px;
+        }
+
+        .col1 {
+            left: 0px;
+        }
+
+        .col2 {
+            left: 150px;
+        }
+
+        .col3 {
+            left: 300px;
+        }
+
+        .col4 {
+            left: 450px;
+        }
+
+        #smalldiv0 {
+            margin: 0px 0px;
+        }
+
+        #smalldiv1 {
+            background-position: -150px 0px;
+        }
+
+        #smalldiv2 {
+            background-position: -300px 0px;
+        }
+
+        #smalldiv3 {
+            background-position: -450px 0px;
+        }
+
+        #smalldiv4 {
+            background-position: 0px -150px;
+        }
+
+        #smalldiv5 {
+            background-position: -150px -150px;
+        }
+
+        #smalldiv6 {
+            background-position: -300px -150px;
+        }
+
+        #smalldiv7 {
+            background-position: -450px -150px;
+        }
+
+        #smalldiv8 {
+            background-position: 0px -300px;
+        }
+
+        #smalldiv9 {
+            background-position: -150px -300px;
+        }
+
+        #smalldiv10 {
+            background-position: -300px -300px;
+        }
+
+        #smalldiv11 {
+            background-position: -450px -300px;
+        }
+
+        #smalldiv12 {
+            background-position: 0px -450px;
+        }
+
+        #smalldiv13 {
+            background-position: -150px -450px;
+        }
+
+        #smalldiv14 {
+            background-position: -300px -450px;
+        }
+
+        #smalldiv15 {
+            background-position: none;
+            display: none;
+        }
+
+        button {
+            font-size: 30px;
+            font-family: Microsoft JhengHei;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="puzzle" id="puzzleid">
+        </div>
+        <button id="randomimg">開始</button>
+        <!-- <button id="result">123</button> -->
+    </div>
+
+    <script>
+        window.onload = npuzzle();
+        var smalldiv;
+        var smalldiv0, smalldiv1, smalldiv2, smalldiv3, smalldiv4, smalldiv5, smalldiv6, smalldiv7, smalldiv8,
+            smalldiv9, smalldiv10, smalldiv11, smalldiv12, smalldiv13, smalldiv14, smalldiv15;
+
+        function npuzzle() {
+            var puzzleid = document.getElementById("puzzleid");
+            for (let i = 0; i < 16; i++) {
+                smalldiv = document.createElement("div");
+                smalldiv.classList.add("smalldivclass");
+                smalldiv.setAttribute("id", `smalldiv${i}`);
+                puzzleid.appendChild(smalldiv);
+            }
+            smalldiv0 = document.getElementById("smalldiv0")
+            smalldiv0.className = "row1 col1 smalldivitem"
+            smalldiv1 = document.getElementById("smalldiv1")
+            smalldiv1.className = "row1 col2 smalldivitem"
+            smalldiv2 = document.getElementById("smalldiv2")
+            smalldiv2.className = "row1 col3 smalldivitem"
+            smalldiv3 = document.getElementById("smalldiv3")
+            smalldiv3.className = "row1 col4 smalldivitem"
+            smalldiv4 = document.getElementById("smalldiv4")
+            smalldiv4.className = "row2 col1 smalldivitem"
+            smalldiv5 = document.getElementById("smalldiv5")
+            smalldiv5.className = "row2 col2 smalldivitem"
+            smalldiv6 = document.getElementById("smalldiv6")
+            smalldiv6.className = "row2 col3 smalldivitem"
+            smalldiv7 = document.getElementById("smalldiv7")
+            smalldiv7.className = "row2 col4 smalldivitem"
+            smalldiv8 = document.getElementById("smalldiv8")
+            smalldiv8.className = "row3 col1 smalldivitem"
+            smalldiv9 = document.getElementById("smalldiv9")
+            smalldiv9.className = "row3 col2 smalldivitem"
+            smalldiv10 = document.getElementById("smalldiv10")
+            smalldiv10.className = "row3 col3 smalldivitem"
+            smalldiv11 = document.getElementById("smalldiv11")
+            smalldiv11.className = "row3 col4 smalldivitem"
+            smalldiv12 = document.getElementById("smalldiv12")
+            smalldiv12.className = "row4 col1 smalldivitem"
+            smalldiv13 = document.getElementById("smalldiv13")
+            smalldiv13.className = "row4 col2 smalldivitem"
+            smalldiv14 = document.getElementById("smalldiv14")
+            smalldiv14.className = "row4 col3 smalldivitem"
+            smalldiv15 = document.getElementById("smalldiv15")
+            smalldiv15.className = "row4 col4 smalldivitem"
+        }
+        // $("#smalldiv15 img").remove();
+        // smalldiv15.remove();
+        var smallobject = {};
+        for (var i = 0; i < 16; i++) {
+            var row = parseInt(i / 4);
+            var col = i % 4;
+            smallobject[i] = {
+                row: row,
+                col: col
+            };
+            // smallarray[i]=i;
+
+        }
+
+        function nearposition(i) {
+            var neararray = [];
+            var row = smallobject[i].row;
+            var col = smallobject[i].col;
+            if (row > 0) {
+                neararray.push((row - 1) * 4 + col);
+            }
+            if (row < 4) {
+                neararray.push((row + 1) * 4 + col);
+            }
+            if (col > 0) {
+                neararray.push(i - 1);
+            }
+            if (col < 4) {
+                neararray.push(i + 1);
+            }
+            return neararray;
+        }
+
+        var start = 1;
+        var end=0;
+        var randomimg = document.getElementById("randomimg");
+        // if (start == 1) {
+        $(".smalldivitem").click(function () {
+        if(start==3){
+            var allsmalldiv = $("#puzzleid div");
+            var i = allsmalldiv.index(this);
+            var check = nearposition(i);
+            while (check.length > 0) {
+                var j = check.pop();
+                if (allsmalldiv.eq(j).attr("id") == "smalldiv15") {
+                    if (i > j) {
+                        var k = j;
+                        j = i;
+                        i = k;
+                    }
+                    var head = allsmalldiv.eq(i);
+                    var between = allsmalldiv.eq(j);
+                    var betweenp = between.prev();
+                    if (Math.abs(i - j) == 1) {
+                        between.after(head);
+                    } else {
+                        head.after(between);
+                        betweenp.after(head);
+                    }
+                    break;
+                }
+            }
+            for (let i = 0; i < 4; i++) {
+                $("#puzzleid div")[i].className = `row1 col${i+1} smalldivitem`
+            }
+            for (let i = 4; i < 8; i++) {
+                $("#puzzleid div")[i].className = `row2 col${i-3} smalldivitem`
+            }
+            for (let i = 8; i < 12; i++) {
+                $("#puzzleid div")[i].className = `row3 col${i-7} smalldivitem`
+            }
+            for (let i = 12; i < 16; i++) {
+                $("#puzzleid div")[i].className = `row4 col${i-11} smalldivitem`
+            }
+            if (end ==2) {
+                if (smalldiv0.className == "row1 col1 smalldivitem" && smalldiv1.className ==
+                    "row1 col2 smalldivitem" &&
+                    smalldiv2.className == "row1 col3 smalldivitem" && smalldiv3.className ==
+                    "row1 col4 smalldivitem" &&
+                    smalldiv4.className == "row2 col1 smalldivitem" && smalldiv5.className ==
+                    "row2 col2 smalldivitem" &&
+                    smalldiv6.className == "row2 col3 smalldivitem" && smalldiv7.className ==
+                    "row2 col4 smalldivitem" &&
+                    smalldiv8.className == "row3 col1 smalldivitem" && smalldiv9.className ==
+                    "row3 col2 smalldivitem" &&
+                    smalldiv10.className == "row3 col3 smalldivitem" && smalldiv11.className ==
+                    "row3 col4 smalldivitem" &&
+                    smalldiv12.className == "row4 col1 smalldivitem" && smalldiv13.className ==
+                    "row4 col2 smalldivitem" &&
+                    smalldiv14.className == "row4 col3 smalldivitem" && smalldiv15.className ==
+                    "row4 col4 smalldivitem") {
+                    alert("恭喜完成");
+                };
+            };
+        }
+        });
+
+
+
+
+        randomimg.addEventListener("click", function() {
+            start=3;
+            end=1;
+            for (let i = 0; i < 500; i++) {
+                var allsmalldiv = $("#puzzleid div");
+                var randommove = nearposition(allsmalldiv.index($("#smalldiv15")[0]));
+                allsmalldiv.eq(randommove[parseInt(Math.random() * randommove.length)]).click();
+            }
+            end = 2;
+        });
+    </script>
+</body>
+
+</html>
