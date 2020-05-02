@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <title>Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .Calendar {
+            width: 100%;
+            font-family: Microsoft JhengHei;
+            background-color: rgb(171, 201, 240);
+        }
+        .themetxt{
+            display: flex;
+            justify-content: space-between;
+        }
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: 30px;
+        }
+
+        td {
+            width: 105px;
+            height: 105px;
+            vertical-align: top;
+            background-color: rgb(200, 224, 238);
+        }
+
+        h1 {
+            font-family: Microsoft JhengHei;
+            display: inline;
+            color: rgb(90, 87, 112);
+        }
+        h2{
+            color: rgb(32, 32, 104);
+        }
+        th {
+            font-family: Microsoft JhengHei;
+            background-color: rgb(147, 192, 235);
+        }
+
+        .datenumber {
+            color: rgb(12, 75, 134);
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .removebtn {
+            font-size: 12px;
+            background-color: rgb(20, 44, 58);
+            color: rgb(214, 219, 245);
+            font-family: Microsoft JhengHei;
+            padding: 0px 5px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        h1,h2{
+            font-weight: 900;
+        }
+        #backid,
+        #nextid,
+        h2 {
+            display: inline;
+        }
+        #backid,
+        #nextid{
+            font-size: 35px;
+        }
+        .datetd{
+            transition: 0.3s;
+        }
+        .datetd:hover{
+            background-color: rgb(153, 172, 228);
+        }
+        .modalcontentdiv{
+            display: flex;
+            justify-content: space-between;
+        }
+        #exampleModalLabel{
+            font-family: Microsoft JhengHei;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="modal fade modal1" tabindex="-1" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">修改內容</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="modalBody" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <input type="text" class="txtclass" id="addtxt">
+                    <button type="button" class="btn btn-primary saveclass" class="btnsaveclose">儲存</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" class="btnsaveclose">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="Calendar">
+        <div class="themetxt">
+            <div class="yearmon">
+                <h1 id="yearid"></h1>
+                <h2 id="h1id"></h2>
+            </div>
+            <div class="nextback">
+                <button id="backid"><</button> 
+                <button id="nextid">></button>
+            </div>
+        </div>
+        <table border="1" id="tableid">
+            <tr>
+                <th>星期日</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+                <th>星期六</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var Montharray = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"];
+        var backid = document.getElementById("backid");
+        var nextid = document.getElementById("nextid");
+        var table = document.getElementById("tableid");
+        var h1id = document.getElementById("h1id");
+
+        var storage = window.localStorage;
+
+        var tableid = document.getElementById("tableid");
+        var daystd = document.querySelectorAll("td");
+        var yearid = document.getElementById("yearid");
+
+        var daysarray = [];
+        var firstdayarray = [];
+        for (var i = 1; i <= 12; i++) {
+            var date = new Date(`2020,${i},1`);
+            var Daysdate = new Date(2020, i, 0).getDate();
+            daysarray.push(Daysdate);
+            var firstday = date.getDay();
+            firstdayarray.push(firstday);
+        }
+        var firstdayitem;
+
+
+
+
+        var pcount = 1;
+        var count = 4;
+
+        function removecontent(key, id) {
+            let content = document.getElementById('addtxt');
+            let saveclass = document.querySelector(".saveclass");
+            let modalbody = document.querySelector(".modal-body")
+            localStorage.removeItem(key);
+            clicktd(id);
+            modalbody.innerText = "已刪除";
+            content.style.display = "none"
+            saveclass.style.display = "none"
+        }
+
+
+        function savedata(id) {
+            while (localStorage.getItem(`${id}num${pcount}`) != null) {
+                pcount++;
+            }
+            let content = document.getElementById('addtxt');
+            if (content.value != "") {
+                storage.setItem(`${id}num${pcount}`, `${content.value}`);
+            }
+            content.value = "";
+            clicktd(id);
+            adddates();
+        }
+
+
+        function clicktd(id) {
+            let content = document.getElementById('addtxt');
+            content.style.display = "inline"
+            pcount = 1;
+            let modalbody = document.querySelector(".modal-body")
+            modalbody.innerText = "";
+            while (pcount <= 30) {
+                if (localStorage.getItem(`${id}num${pcount}`) != null) {
+                    let div = document.createElement("div");
+                    let modaltxt = document.createElement("p");
+                    modaltxt.innerText = storage.getItem(`${id}num${pcount}`);
+                    div.appendChild(modaltxt);
+                    let removebtn = document.createElement("button");
+                    removebtn.textContent = "刪除";
+                    removebtn.className = "removebtn";
+                    div.appendChild(removebtn);
+                    modalbody.appendChild(div);
+                    div.className = "modalcontentdiv"
+                    removebtn.setAttribute("onclick", `removecontent("${id}num${pcount}",${id})`);
+                }
+                pcount++;
+            }
+            let saveclass = document.querySelector(".saveclass");
+            saveclass.style.display = "inline"
+            saveclass.setAttribute("onclick", `savedata("${id}")`);
+            pcount = 1;
+            adddates();
+        }
+
+        function adddates() {
+            let daysitemarray = [];
+            for (let i = 1; i <= daysarray[count]; i++) {
+                daysitemarray.push(i);
+            }
+            firstdayitem = firstdayarray[count];
+
+            for (let i = 0; i < daysarray[count]; i++) {
+                daystd[i + firstdayitem].innerHTML = "";
+                let datenumber = document.createElement("div");
+                daystd[i + firstdayitem].appendChild(datenumber);
+                datenumber.textContent = daysitemarray[i];
+
+                datenumber.className = "datenumber"
+                if (daystd[i + firstdayitem].textContent != "") {
+                    datenumber.className = "datenumber"
+                    daystd[i + firstdayitem].setAttribute("data-target", `#exampleModal`);
+                    daystd[i + firstdayitem].setAttribute("data-toggle", "modal");
+                    daystd[i + firstdayitem].setAttribute("id", `mon${count+1}date${i+1}`);
+                    daystd[i + firstdayitem].setAttribute("onclick", "clicktd(this.id)");
+                    daystd[i + firstdayitem].style.cursor="pointer"
+                    daystd[i + firstdayitem].className="datetd"
+                }
+                while (pcount <= 30) {
+                    if (localStorage.getItem(`mon${count+1}date${i+1}num${pcount}`) != null) {
+                        let msg = document.createElement("p");
+                        msg.textContent = localStorage.getItem(`mon${count+1}date${i+1}num${pcount}`)
+                        daystd[i + firstdayitem].appendChild(msg);
+                    }
+                    pcount++
+                }
+                h1id.innerText = Montharray[count];
+                yearid.innerText = "2020";
+                pcount = 1;
+            }
+        }
+
+        adddates();
+
+        function clearcontent() {
+            for (let i = 0; i < daysarray[count]; i++) {
+                daystd[i + firstdayitem].textContent = null;
+                daystd[i + firstdayitem].setAttribute("data-target", ``)
+                daystd[i + firstdayitem].setAttribute("data-toggle", "")
+                daystd[i + firstdayitem].setAttribute("id", ``)
+                daystd[i + firstdayitem].setAttribute("onclick", "")
+                daystd[i + firstdayitem].style.cursor=""
+                daystd[i + firstdayitem].className=""
+            }
+        }
+        nextid.addEventListener("click", function () {
+            clearcontent();
+            count++;
+            adddates();
+            if (h1id.innerText == "十二月") {
+                nextid.style.display = "none";
+            }
+            backid.style.display = "inline";
+        })
+
+
+        backid.addEventListener("click", function () {
+            clearcontent();
+            count--;
+            adddates();
+            backid.style.display = "inline";
+            if (h1id.innerText == "一月") {
+                backid.style.display = "none";
+            }
+            nextid.style.display = "inline";
+        })
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
