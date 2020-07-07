@@ -557,6 +557,7 @@
         display: flex;
         border: 1px solid rgb(184, 180, 180);
         padding: 30px 0 25px 0;
+        height: 100%;
       }
 
       .SaletGroup:hover {
@@ -652,11 +653,6 @@
         position: absolute;
         bottom: 270px;
       }
-
-      .SaleImg .Perenct {
-        display: none;
-      }
-
       .See {
         padding: 0 55px;
       }
@@ -714,7 +710,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 45px;
+        top:-25px
       }
 
       .Month .rectangle {
@@ -756,6 +752,7 @@
         display: flex;
         border: 1px solid rgb(184, 180, 180);
         padding: 30px 0 25px 0;
+        height: 100%;
       }
 
       .SmallFeatureTxt h4 {
@@ -831,11 +828,6 @@
         text-decoration: line-through;
         margin-top: 5px;
       }
-
-      .FeatureImg .Perenct {
-        display: none;
-      }
-
       .MoneyGroup {
         padding: 10px 0 20px 0;
       }
@@ -1069,7 +1061,16 @@
       display: inline-block;
       margin-top: 20px;
     }
-
+    @media screen and (min-width:992px){
+      .Browse{
+        padding: 0 175px;
+      }
+    }
+    @media screen and (max-width:991px){
+      .Browse{
+       text-align: center;
+      }
+    }
     @media screen and (min-width:768px) {
       .NavbarSearch .navbar-toggler {
         margin-left: 6%;
@@ -1344,10 +1345,6 @@
         background-color: black;
       }
 
-      .Browse {
-        padding: 0 175px;
-      }
-
       .Browse .BrowseThemeTxt {
         text-align: center;
         padding: 35px 0px;
@@ -1365,10 +1362,7 @@
         padding: 0 0 100px 0;
         border: 1px solid rgb(207, 203, 203);
         display: inline-block;
-      }
-
-      .ProductGroupTrea{
-        padding-bottom: 73px;
+        height: 100%;
       }
       .ProductGroup h4 {
         font-size: 23px;
@@ -1409,6 +1403,7 @@
       .SaletGroup {
         padding-top: 15px;
         border: 1px solid rgb(207, 203, 203);
+        height: 100%;
       }
 
       .SaletGroup:hover {
@@ -1491,13 +1486,6 @@
         font-size: 13px;
         padding: 5px 10px;
       }
-
-      .SaleImg .Perenct {
-        position: absolute;
-        left: 160px;
-        bottom: 195px;
-        background-color: #7dd0dc;
-      }
       .See {
         text-align: center;
         padding: 0 145px;
@@ -1555,10 +1543,10 @@
         left: 0;
         right: 0;
         margin: auto;
-        width: 350px;
+        width: 90%;
         height: 1px;
         background-color: rgb(209, 204, 204);
-        bottom: 513px;
+        top: -25px;
       }
 
       .Month .rectangle {
@@ -1595,6 +1583,7 @@
       .FeaturetGroup {
         padding-top: 15px;
         border: 1px solid rgb(207, 203, 203);
+        height: 100%;
       }
 
       .SmallFeatureTxt h4 {
@@ -1678,14 +1667,6 @@
         padding: 5px 10px;
         margin-left: -20px;
       }
-
-      .FeatureImg .Perenct {
-        position: absolute;
-        left: 180px;
-        bottom: 195px;
-        background-color: #7dd0dc;
-      }
-
       .Feature h3 {
         text-align: center;
         font-size: 40px;
@@ -2050,7 +2031,7 @@
     <div class="Browse">
       <h3 class="BrowseThemeTxt"><strong>BROWSE</strong> OUR CATEGORIES</h3>
       <div class="row no-gutters">
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12 ">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category1_c699b5ea-b75e-4185-9a8e-2a65b0fc3814_430x396_crop_top.jpg" alt=""
               class="d-block w-100">
@@ -2058,21 +2039,21 @@
             <p>7 products</p>
           </a>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category2_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR STYLING</h4>
             <p>13 products</p>
           </a>
         </div>
-        <div class="col-12 col-md-3">
-          <a href="" class="ProductGroup ProductGroupTrea">
+        <div class="col-xl-3 col-lg-6 col-12 ">
+          <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category3_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR HEALTH TREATMENT</h4>
             <p>9 products</p>
           </a>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category4_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR CARE FOR KIDS</h4>
@@ -2084,10 +2065,9 @@
     <div class="Sale">
       <h3 class="SaleThemeTxt"><strong>PRODUCTS</strong> ON SALE</h3>
       <div class="row no-gutters">
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
-              <span>NEW</span>
               <a href=""><img src="stylefactoryimg/argan_oil_hair_mask_01_370x370_crop_top.jpg" alt=""
                   class="d-block"></a>
             </div>
@@ -2107,11 +2087,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
-              <span class="LineNew">NEW</span>
-              <span class="Perenct">-10%</span>
               <a href=""><img src="stylefactoryimg/garnier_fructis_01_370x370_crop_top.jpg" alt="" class="d-block"></a>
             </div>
             <div class="SmallSaleTxt SmallSaleTxtLine">
@@ -2130,10 +2108,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
-              <span class="RNew">NEW</span>
               <a href=""><img src="stylefactoryimg/herbal_essences_01_370x370_crop_top.jpg" alt="" class="d-block"></a>
             </div>
             <div class="SmallSaleTxt">
@@ -2150,11 +2127,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
-              <span class="BNew">NEW</span>
-              <span class="Perenct">-10%</span>
               <a href=""><img src="stylefactoryimg/l_oreal_paris_studio_line_1_370x370_crop_top.jpg" alt=""
                   class="d-block"></a>
             </div>
@@ -2238,11 +2213,9 @@
     <div class="Feature">
       <h3 class="FeatureThemeTxt"><strong>FEATURED</strong>PROUDCTS</h3>
       <div class="row no-gutters">
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
-              <span>NEW</span>
-              <span class="Perenct">-38%</span>
               <a href="">
                 <img
                   src="https://cdn.shopify.com/s/files/1/1711/1759/products/infiniti_pro_by_conair_hair_designer_3_in_1_styling_system_01_grande.png?v=1484313055"
@@ -2268,10 +2241,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
-              <span>NEW</span>
               <a href="">
                 <img src="stylefactoryimg/instyler_ionic_styler_pro_ceramic_flat_iron_1_370x370_crop_top.jpg" alt=""
                   class="d-block">
@@ -2293,10 +2265,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
-              <span>NEW</span>
               <a href="">
                 <img src="stylefactoryimg/jose_eber_wet_dry_flat_iron_straightener_01_370x370_crop_top.jpg" alt=""
                   class="d-block">
@@ -2317,11 +2288,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-3">
+        <div class="col-xl-3 col-lg-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
-              <span>NEW</span>
-              <span class="Perenct">-14%</span>
               <a href="">
                 <img src="stylefactoryimg/glide_thru_detangler_hair_comb_or_brush_01_370x370_crop_top.jpg" alt=""
                   class="d-block">
@@ -2378,7 +2347,7 @@
 
   <div class="EndNavGroup">
     <div class="row">
-      <div class="col-12 col-md-3">
+      <div class="col-xl-3 col-lg-6 col-12">
         <div class="NavLogo">
           <a href="">
             <img src="https://cdn.shopify.com/s/files/1/1711/1759/t/2/assets/footer_logo.png?v=15429984064853762523"
@@ -2389,7 +2358,7 @@
             lineup.</p>
         </div>
       </div>
-      <div class="col-12 col-md-3">
+      <div class="col-xl-3 col-lg-6 col-12">
         <div class="NavCate">
           <h3>CATEGORIES</h3>
           <nav>
@@ -2417,7 +2386,7 @@
           </nav>
         </div>
       </div>
-      <div class="col-12 col-md-3">
+      <div class="col-xl-3 col-lg-6 col-12">
         <div class="NavMenu">
           <h3>MENU</h3>
           <nav>
@@ -2442,7 +2411,7 @@
           </nav>
         </div>
       </div>
-      <div class="col-12 col-md-3">
+      <div class="col-xl-3 col-lg-6 col-12">
         <div class="NavContact">
           <h3>CONTACT INFORMATION</h3>
           <address>
