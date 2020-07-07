@@ -1062,13 +1062,17 @@
       margin-top: 20px;
     }
     @media screen and (min-width:992px){
-      .Browse{
+      .Browse, .Sale, .Feature{
         padding: 0 175px;
       }
     }
     @media screen and (max-width:991px){
       .Browse{
        text-align: center;
+       padding: 0 10%;
+      }
+      .Sale, .Feature{
+        padding: 0 10%;
       }
     }
     @media screen and (min-width:768px) {
@@ -1159,7 +1163,7 @@
       }
 
       .FullImgContent {
-        width: 410px;
+        /* width: 410px; */
         color: white;
         font-size: 17px;
         position: absolute;
@@ -1303,7 +1307,7 @@
         font-weight: 700;
         margin-top: 25px;
         position: absolute;
-        right: 35%;
+        right: 31%;
         top: 15%;
       }
 
@@ -1313,7 +1317,7 @@
         margin-top: -20px;
         letter-spacing: 5px;
         position: absolute;
-        right: 9%;
+        right: 3%;
         top: 45%;
       }
 
@@ -1322,7 +1326,7 @@
         font-weight: 300;
         margin-top: 20px;
         position: absolute;
-        right: 13%;
+        right: 8%;
         top: 60%;
       }
 
@@ -1380,9 +1384,9 @@
         display: inline-block;
         margin-top: 30px;
       }
-      .Sale {
+      /* .Sale {
         padding: 0 175px;
-      }
+      } */
 
       .Sale .SaleThemeTxt {
         text-align: center;
@@ -1560,9 +1564,9 @@
         top: -25px;
       }
 
-      .Feature {
+      /* .Feature {
         padding: 0 175px;
-      }
+      } */
 
       .Feature .FeatureThemeTxt {
         text-align: center;
@@ -2031,7 +2035,7 @@
     <div class="Browse">
       <h3 class="BrowseThemeTxt"><strong>BROWSE</strong> OUR CATEGORIES</h3>
       <div class="row no-gutters">
-        <div class="col-xl-3 col-lg-6 col-12 ">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 ">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category1_c699b5ea-b75e-4185-9a8e-2a65b0fc3814_430x396_crop_top.jpg" alt=""
               class="d-block w-100">
@@ -2039,21 +2043,21 @@
             <p>7 products</p>
           </a>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category2_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR STYLING</h4>
             <p>13 products</p>
           </a>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12 ">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12 ">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category3_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR HEALTH TREATMENT</h4>
             <p>9 products</p>
           </a>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <a href="" class="ProductGroup">
             <img src="stylefactoryimg/category4_430x396_crop_top.jpg" alt="" class="d-block w-100">
             <h4>HAIR CARE FOR KIDS</h4>
@@ -2065,7 +2069,7 @@
     <div class="Sale">
       <h3 class="SaleThemeTxt"><strong>PRODUCTS</strong> ON SALE</h3>
       <div class="row no-gutters">
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
               <a href=""><img src="stylefactoryimg/argan_oil_hair_mask_01_370x370_crop_top.jpg" alt=""
@@ -2087,7 +2091,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
               <a href=""><img src="stylefactoryimg/garnier_fructis_01_370x370_crop_top.jpg" alt="" class="d-block"></a>
@@ -2108,7 +2112,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
               <a href=""><img src="stylefactoryimg/herbal_essences_01_370x370_crop_top.jpg" alt="" class="d-block"></a>
@@ -2127,7 +2131,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="SaletGroup">
             <div class="SaleImg">
               <a href=""><img src="stylefactoryimg/l_oreal_paris_studio_line_1_370x370_crop_top.jpg" alt=""
@@ -2213,7 +2217,7 @@
     <div class="Feature">
       <h3 class="FeatureThemeTxt"><strong>FEATURED</strong>PROUDCTS</h3>
       <div class="row no-gutters">
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
               <a href="">
@@ -2241,7 +2245,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
               <a href="">
@@ -2265,7 +2269,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
               <a href="">
@@ -2288,7 +2292,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-12">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-12">
           <div class="FeaturetGroup">
             <div class="FeatureImg">
               <a href="">
