@@ -376,6 +376,12 @@
     font-weight: 700;
     color: gray;
   }
+  .NavContact h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    width: 60%;
+  }
   @media screen and (max-width:767px) {
     .DropDowns .row .col-md-12 .breadcrumb {
       border-top: 2px solid rgb(211, 206, 206);
@@ -871,15 +877,6 @@
       font-weight: 600;
       margin-top: 5px;
     }
-
-    .NavCate p {
-      color: #d3d3d3;
-      font-weight: 300;
-      font-size: 16px;
-      margin-top: 26px;
-      line-height: 0.3;
-    }
-
     .NavMenu h3 {
       font-size: 18px;
       color: white;
@@ -887,7 +884,7 @@
       margin-top: 20px;
     }
 
-    .NavMenu p {
+    .NavMenu p, .NavCate p {
       color: #d3d3d3;
       font-weight: 300;
       font-size: 16px;
@@ -897,12 +894,8 @@
 
     .NavContact h3 {
       font-size: 18px;
-      color: white;
-      font-weight: 600;
-      width: 60%;
       margin-top: 23px;
     }
-
     .NavContact address {
       color: #d3d3d3;
       font-weight: 300;
@@ -1563,36 +1556,19 @@
       color: white;
       font-weight: 600;
     }
-
-    .NavCate p {
-      color: #d3d3d3;
-      font-weight: 300;
-      font-size: 20px;
-      margin-top: 26px;
-      line-height: 1;
-    }
-
     .NavMenu h3 {
       font-size: 20px;
       color: white;
       font-weight: 600;
     }
 
-    .NavMenu p {
+    .NavMenu p, .NavCate p {
       color: #d3d3d3;
       font-weight: 300;
       font-size: 20px;
       margin-top: 26px;
       line-height: 1;
     }
-
-    .NavContact h3 {
-      font-size: 20px;
-      color: white;
-      font-weight: 600;
-      width: 60%;
-    }
-
     .NavContact address {
       color: #d3d3d3;
       font-weight: 300;
