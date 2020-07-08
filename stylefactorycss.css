@@ -72,7 +72,7 @@
     text-decoration: none;
   }
 
-  .DropDowns .breadcrumb .breadcrumb-item a:hover ,.DropDowns .breadcrumb .ColorTxt a {
+  .DropDowns .breadcrumb .breadcrumb-item a:hover ,.DropDowns .breadcrumb .ColorTxt a, .HeartEye a i:hover, .LatestShopping .row .FREE {
     color: #ffa396;
   }
   .row {
@@ -103,21 +103,12 @@
   .Logo {
     padding: 30px 0 10px 0;
   }
-  .LatestShopping .row .NEW {
-    color: #7dd0dc;
+  .LatestShopping .row .NEW, .LatestShopping .row .WE, .LatestShopping .row .FREE{
     font-size: 35px;
   }
-
   .LatestShopping .row .WE {
     color: #d4bcb5;
-    font-size: 35px;
   }
-
-  .LatestShopping .row .FREE {
-    color: #ffa396;
-    font-size: 35px;
-  }
-
   .LatestShopping .row h4 {
     font-size: 18px;
     margin-top: 20px;
@@ -133,11 +124,6 @@
     height: 300px;
     background-color: #1d5275;
   }
-
-  .HeartEye a i:hover {
-    color: #ffa396;
-  }
-
   .SEEContent a:hover, .SmallFeatureTxt .Shopcart:hover {
     background-color: black;
     color: white;
@@ -145,7 +131,7 @@
   .NavCate a ,.NavMenu a,.CarZero a,.FooterTxt a{
     text-decoration: none;
   }
-  .NavCate nav a p:hover ,.NavMenu nav a p:hover, .NavContact a p:hover,.FooterTxt a:hover{
+  .NavCate nav a p:hover ,.NavMenu nav a p:hover, .NavContact a p:hover,.FooterTxt a:hover,.LatestShopping .row .NEW{
     color: #7dd0dc;
   }
   .NavContact a {
@@ -248,16 +234,9 @@
     display: inline-block;
   }
   .Ban {
-    font-size: 15px;
-    border: 3px solid black;
-    text-decoration: none;
-    color: black;
-    padding: 10px 15px;
-    font-weight: 500;
-    display: inline-block;
     opacity: 0.3;
   }
-  .SmallSaleTxt .Shopcart, .FeaturetGroup .Shopcart {
+  .SmallSaleTxt .Shopcart, .FeaturetGroup .Shopcart,.Ban {
     font-size: 15px;
     border: 3px solid black;
     text-decoration: none;
@@ -341,19 +320,39 @@
       .RectangleO {
         background-color: #ffa396;
       }
+      .FullImg {
+        background-image: url('stylefactoryimg/greeting_image.jpg');
+        background-size: cover;
+        width: 100%;
+        background-position: center center;
+      }
+      .SaletGroup .SaleImg img,.FeaturetGroup .FeatureImg img {
+        max-width: 100%;
+      }
+      .JOIN {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+      }
+      .NavContact address {
+        color: #d3d3d3;
+        font-weight: 300;
+        width: 70%;
+        line-height: 2;
+      }
+      footer span a {
+        color: #d3d3d3;
+        font-size: 15px;
+      }
   @media screen and (max-width:767px) {
     .DropDowns .row .col-md-12 .breadcrumb {
       border-top: 2px solid rgb(211, 206, 206);
     }
 
     .FullImg {
-      background-image: url('stylefactoryimg/greeting_image.jpg');
-      background-size: cover;
-      width: 100%;
       height: 305px;
-      background-position: center center;
     }
-
     .FullImgTxt {
       position: absolute;
       color: white;
@@ -366,17 +365,9 @@
     .JOIN a {
       padding: 5px 5px;
     }
-    .JOIN {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-    }
-
-    .FullImgContent {
+    .FullImgContent, .SmallSaleTxt .eye, .SmallFeatureTxt .eye,.DropDowns {
       display: none;
     }
-
     .LatestShopping {
       padding: 35px 0 55px 0;
     }
@@ -425,10 +416,9 @@
       transition: 0.3s;
     }
 
-    .LatestShopping .row a:hover {
+    .LatestShopping .row a:hover, .SmallSaleTxt a,.SmallFeatureTxt a{
       text-decoration: none;
     }
-
     .LatestShopping .row a h4 {
       color: black;
       text-decoration: none;
@@ -454,10 +444,9 @@
       padding-bottom:15px;
     }
 
-    .Browse .BrowseThemeTxt strong {
+    .Browse .BrowseThemeTxt strong, .Sale .SaleThemeTxt strong, .Feature .FeatureThemeTxt strong {
       font-weight: 700;
     }
-    
     .ProductGroup p{
       margin-top: 25px;
     }
@@ -479,11 +468,6 @@
       padding: 10px 0px 15px 0;
       font-weight: 300;
     }
-
-    .Sale .SaleThemeTxt strong {
-      font-weight: 700;
-    }
-
     .SmallSaleTxt {
       text-align: center;
       width: 70%;
@@ -513,11 +497,6 @@
       margin-left: 42px;
       position: relative;
     }
-
-    .SaletGroup .SaleImg img {
-      max-width: 100%;
-    }
-
     .SmallSaleContent {
       font-size: 12px;
       padding: 0 12% 0 10%;
@@ -530,20 +509,12 @@
       font-weight: 700;
       margin-top: 5px;
     }
-
-    .SmallSaleTxt .eye {
-      display: none;
-    }
     .SmallSaleTxt .heart,.SmallFeatureTxt .heart {
       display: block;
       font-size: 20px;
       margin-top: 20px;
       color: gray;
     }
-    .SmallSaleTxt a {
-      text-decoration: none;
-    }
-
     .SaleImg span {
       position: absolute;
       color: white;
@@ -588,7 +559,7 @@
       font-weight: 500;
     }
 
-    .SEEContent, .Month {
+    .SEEContent, .Month, .FollowConnected, footer {
       text-align: center;
     }
     .Month h4 {
@@ -629,11 +600,6 @@
       padding: 35px 0px 15px 0;
       font-weight: 300;
     }
-
-    .Feature .FeatureThemeTxt strong {
-      font-weight: 700;
-    }
-
     .SmallFeatureTxt {
       text-align: center;
       width: 70%;
@@ -660,11 +626,6 @@
       margin-left: 42px;
       position: relative;
     }
-
-    .FeaturetGroup .FeatureImg img {
-      max-width: 100%;
-    }
-
     .SmallFeatureContent {
       font-size: 12px;
       padding: 0 12% 0 10%;
@@ -677,14 +638,6 @@
       font-weight: 700;
       padding: 5px 0 2px 0
     }
-
-    .SmallFeatureTxt .eye {
-      display: none;
-    }
-    .SmallFeatureTxt a {
-      text-decoration: none;
-    }
-
     .FeatureImg span {
       position: absolute;
       color: white;
@@ -697,10 +650,6 @@
     .MoneyGroup {
       padding: 10px 0 20px 0;
     }
-    .FollowConnected {
-      text-align: center;
-    }
-
     .FollowConnected h3 {
       font-size: 26px;
       font-weight: 300;
@@ -751,7 +700,6 @@
       border-radius: 50%;
     }
 
-
     .OffersConnected .Connected .HrefContactEnd {
       padding: 10px 0 20px 0;
     }
@@ -791,31 +739,12 @@
       margin-top: 23px;
     }
     .NavContact address {
-      color: #d3d3d3;
-      font-weight: 300;
       font-size: 16px;
-      width: 70%;
-      line-height: 2;
       margin-top: 15px;
     }
-
     .NavContact address .mail {
       margin-top: -12px;
     }
-
-    footer {
-      text-align: center;
-    }
-
-    footer span a {
-      color: #d3d3d3;
-      font-size: 15px;
-    }
-
-    .DropDowns {
-      display: none;
-    }
-
     .dropdown .btn {
       text-align: center;
       font-size: 20px;
@@ -841,7 +770,7 @@
     }
   }
   @media screen and (max-width:991px){
-    .Browse{
+    .Browse, .See{
      text-align: center;
      padding: 0 10%;
     }
@@ -850,10 +779,6 @@
     }
     .LatestShopping {
       padding: 6% 10% 7% 10%;
-    }
-    .See {
-      text-align: center;
-      padding: 0 10%;
     }
   }
   @media screen and (min-width:768px) {
@@ -866,13 +791,8 @@
     }
 
     .FullImg {
-      background-image: url('stylefactoryimg/greeting_image.jpg');
-      background-size: cover;
-      width: 100%;
       height: 880px;
-      background-position: center center;
     }
-
     .navbar {
       padding: 15px 50px;
     }
@@ -949,11 +869,7 @@
       padding: 31px 40px;
     }
     .JOIN {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
       padding: 30px 40px;
-      text-align: center;
     }
     .LatestShopping .row .Item::after {
       border-top: 1px solid gray;
@@ -971,7 +887,7 @@
     .LatestShopping .row .ItemTopLineG::before {
       border-top: 1px solid #7dd0dc;
     }
-    .LatestShopping .row .Item::before{
+    .LatestShopping .row .Item::before,.Rectangleitem{
       top: 0;
     }
     .LatestShopping .row .ItemTopLineB::before {
@@ -994,9 +910,6 @@
     .LatestShopping .row .col-md-4 a h4 {
       color: black;
       text-decoration: none;
-    }
-    .Rectangleitem{
-      top: 0px;
     }
     .HairImg {
       height: 500px;
@@ -1052,11 +965,9 @@
       font-size: 40px;
     }
 
-    .Browse .BrowseThemeTxt strong {
+    .Browse .BrowseThemeTxt strong ,.Sale .SaleThemeTxt strong, .Feature .FeatureThemeTxt strong{
       font-weight: 700;
     }
-
-
     .ProductGroup {
       padding: 0 0 100px 0;
       height: 100%;
@@ -1083,11 +994,6 @@
       font-weight: 300;
       font-size: 40px;
     }
-
-    .Sale .SaleThemeTxt strong {
-      font-weight: 700;
-    }
-
     .SmallSaleTxt {
       text-align: center;
       padding: 25px 0 60px 0;
@@ -1114,12 +1020,7 @@
       margin: auto;
       position: relative;
     }
-
-    .SaleImg img {
-      max-width: 100%;
-    }
-
-    .SmallSaleContent {
+    .SmallSaleContent, .SmallFeatureContent, .dropdown {
       display: none;
     }
     .SmallSaleTxt .Money {
@@ -1133,7 +1034,7 @@
       color: gray;
     }
 
-    .SmallSaleTxt h4 {
+    .SmallSaleTxt h4,.SmallFeatureTxt h4 {
       font-weight: 300;
     }
     .HeartEye {
@@ -1216,11 +1117,6 @@
       font-weight: 300;
       font-size: 40px;
     }
-
-    .Feature .FeatureThemeTxt strong {
-      font-weight: 700;
-    }
-
     .SmallFeatureTxt {
       text-align: center;
       padding: 25px 0 35px 0;
@@ -1245,36 +1141,19 @@
       margin: auto;
       position: relative;
     }
-
-    .FeatureImg img {
-      max-width: 100%;
-    }
-
-    .SmallFeatureContent {
-      display: none;
-    }
     .SmallFeatureTxt .Money {
       font-size: 20px;
       font-weight: 700;
       padding-right: 5px;
       margin-top: 10px;
     }
-
-    .SmallFeatureTxt .From {
+    .SmallFeatureTxt .From,.SmallFeatureTxt .LineMoney{
       font-size: 20px;
       font-weight: 700;
       color: gray;
     }
-
-    .SmallFeatureTxt h4 {
-      font-weight: 300;
-    }
-
     .SmallFeatureTxt .LineMoney {
       text-decoration: line-through;
-      font-size: 20px;
-      font-weight: 700;
-      color: gray;
     }
 
     .HeartEye {
@@ -1330,7 +1209,7 @@
       padding: 90px 0;
     }
 
-    .OffersConnected .Offers h4 {
+    .OffersConnected .Offers h4,.OffersConnected .Connected h4 {
       font-size: 24px;
       font-weight: 700;
     }
@@ -1345,8 +1224,6 @@
       width: 370px;
     }
     .OffersConnected .Connected h4 {
-      font-size: 24px;
-      font-weight: 700;
       padding: 65px 0 0 0;
     }
 
@@ -1392,27 +1269,13 @@
       line-height: 1;
     }
     .NavContact address {
-      color: #d3d3d3;
-      font-weight: 300;
       font-size: 20px;
-      width: 70%;
-      line-height: 2;
       margin-top: 20px;
     }
-
     .NavContact address .mail {
       margin-top: -15px;
     }
-    footer span a {
-      color: #d3d3d3;
-      font-size: 15px;
-    }
-
     .FooterTxt {
       margin-left: 155px;
-    }
-
-    .dropdown {
-      display: none;
     }
   }
