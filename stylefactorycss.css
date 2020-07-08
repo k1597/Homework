@@ -370,6 +370,12 @@
     text-decoration: none;
     margin: 5px 0 60px 0;
   }
+  .SmallSaleTxt .LineMoney {
+    text-decoration: line-through;
+    font-size: 20px;
+    font-weight: 700;
+    color: gray;
+  }
   @media screen and (max-width:767px) {
     .DropDowns .row .col-md-12 .breadcrumb {
       border-top: 2px solid rgb(211, 206, 206);
@@ -626,13 +632,8 @@
     }
 
     .SmallSaleTxt .LineMoney {
-      font-size: 20px;
-      font-weight: 700;
-      color: gray;
-      text-decoration: line-through;
       margin-top: 5px;
     }
-
     .SaleImg .LineNew {
       position: absolute;
       bottom: 275px;
@@ -781,14 +782,6 @@
       padding: 5px 10px;
       right: 55px;
       bottom: 260px;
-    }
-
-    .SmallFeatureTxt .LineMoney {
-      font-size: 20px;
-      font-weight: 700;
-      color: gray;
-      text-decoration: line-through;
-      margin-top: 5px;
     }
     .MoneyGroup {
       padding: 10px 0 20px 0;
@@ -1296,14 +1289,6 @@
     .SmallSaleTxt h4 {
       font-weight: 300;
     }
-
-    .SmallSaleTxt .LineMoney {
-      text-decoration: line-through;
-      font-size: 20px;
-      font-weight: 700;
-      color: gray;
-    }
-
     .HeartEye {
       font-size: 18px;
       margin-top: 25px;
