@@ -345,6 +345,12 @@
         color: #d3d3d3;
         font-size: 15px;
       }
+      .FollowConnected h3 strong {
+        font-weight: 500;
+      }
+      .See h3 strong {
+        font-weight: 500;
+      }
   @media screen and (max-width:767px) {
     .DropDowns .row .col-md-12 .breadcrumb {
       border-top: 2px solid rgb(211, 206, 206);
@@ -554,11 +560,6 @@
       font-weight: 300;
       font-size: 26px;
     }
-
-    .See h3 strong {
-      font-weight: 500;
-    }
-
     .SEEContent, .Month, .FollowConnected, footer {
       text-align: center;
     }
@@ -655,11 +656,6 @@
       font-weight: 300;
       padding: 60px 0;
     }
-
-    .FollowConnected h3 strong {
-      font-weight: 500;
-    }
-
     .OffersConnected {
       background-color: #e7f5f7;
       padding: 60px 0;
@@ -1067,11 +1063,6 @@
       font-weight: 300;
       padding: 100px 0 70px 0;
     }
-
-    .See h3 strong {
-      font-weight: 600;
-    }
-
     .SeeImg {
       margin: 0 30px;
     }
@@ -1199,11 +1190,6 @@
       font-weight: 300;
       padding: 95px 0;
     }
-
-    .FollowConnected h3 strong {
-      font-weight: 500;
-    }
-
     .OffersConnected {
       background-color: #e7f5f7;
       padding: 90px 0;
