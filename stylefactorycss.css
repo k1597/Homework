@@ -3,26 +3,10 @@
     padding: 0;
     list-style: none;
 }
-.OffersConnected .Offers .SearchSub a:hover {
+.OffersConnected .Offers .SearchSub a:hover ,.SmallBrowseTxt a:hover, .JOIN a:hover , .SmallSaleTxt .Shopcart:hover {
     background-color: black;
     color: white;
   }
-
-  .SmallBrowseTxt a:hover {
-    color: white;
-    background-color: black;
-  }
-
-  .JOIN a:hover {
-    color: white;
-    background-color: black;
-  }
-
-  .SmallSaleTxt .Shopcart:hover {
-    color: white;
-    background-color: black;
-  }
-
   .navbar-light .navbar-toggler {
     border: none;
     order: -1;
@@ -50,34 +34,18 @@
     vertical-align: top;
     color: black;
   }
-
-  .CarZero a {
-    text-decoration: none;
-  }
-
-  .CarZero a:hover span {
+  .CarZero a:hover span ,.CarZero a:hover i {
     color: rgb(196, 137, 137);
   }
-
-  .CarZero a:hover i {
-    color: rgb(196, 137, 137);
-  }
-
   .NavbarSearch .form-control {
     width: 65%;
     margin-left: 20px;
   }
 
-  .NavbarSearch .row .col-12 {
+  .NavbarSearch .row .col-12 , .NavbarSearch .row .col-md-12 {
     padding-left: 0;
     padding-right: 0;
   }
-
-  .NavbarSearch .row .col-md-12 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .CarSearchImg {
     display: flex;
     align-items: center;
@@ -95,7 +63,6 @@
     background-color: #181a1f;
   }
 
-
   .DropDowns .breadcrumb {
     background-color: white;
     padding: 20px 0 10px 0;
@@ -105,14 +72,9 @@
     text-decoration: none;
   }
 
-  .DropDowns .breadcrumb .breadcrumb-item a:hover {
+  .DropDowns .breadcrumb .breadcrumb-item a:hover ,.DropDowns .breadcrumb .ColorTxt a {
     color: #ffa396;
   }
-
-  .DropDowns .breadcrumb .ColorTxt a {
-    color: #ffa396;
-  }
-
   .row {
     margin-left: 0;
     margin-right: 0;
@@ -123,7 +85,7 @@
     width: 100%;
   }
 
-  .Logo .row {
+  .Logo .row ,.LatestShopping{
     text-align: center;
   }
 
@@ -138,19 +100,9 @@
   .HrefContact i {
     color: gray;
   }
-
-  .Logo .HrefContact a i:hover {
-    color: black;
-  }
-
   .Logo {
     padding: 30px 0 10px 0;
   }
-
-  .LatestShopping {
-    text-align: center;
-  }
-
   .LatestShopping .row .NEW {
     color: #7dd0dc;
     font-size: 35px;
@@ -186,47 +138,19 @@
     color: #ffa396;
   }
 
-  .SEEContent a:hover {
+  .SEEContent a:hover, .SmallFeatureTxt .Shopcart:hover {
     background-color: black;
     color: white;
   }
-
-  .SmallFeatureTxt .Shopcart:hover {
-    background-color: black;
-    color: white;
-  }
-
-  .NavCate a {
+  .NavCate a ,.NavMenu a,.CarZero a,.FooterTxt a{
     text-decoration: none;
   }
-
-  .NavCate nav a p:hover {
+  .NavCate nav a p:hover ,.NavMenu nav a p:hover, .NavContact a p:hover,.FooterTxt a:hover{
     color: #7dd0dc;
   }
-
-  .NavMenu a {
-    text-decoration: none;
-  }
-
-  .NavMenu nav a p:hover {
-    color: #7dd0dc;
-  }
-
   .NavContact a {
     text-decoration: none;
     color: #d3d3d3;
-  }
-
-  .NavContact a p:hover {
-    color: #7dd0dc;
-  }
-
-  .FooterTxt a {
-    text-decoration: none;
-  }
-
-  .FooterTxt a:hover {
-    color: #7dd0dc;
   }
 
   .LatestShopping .row a:hover {
@@ -253,11 +177,10 @@
     background-color: #feede9;
   }
 
-  .SmallSaleTxtThemeTxt {
+  .SmallSaleTxtThemeTxt ,.SmallFeatureTxtTheme ,.Logo .HrefContact a i:hover{
     color: black;
   }
-
-  .SmallSaleTxtThemeTxt:hover {
+  .SmallSaleTxtThemeTxt:hover, .SmallFeatureTxtTheme:hover {
     text-decoration: none;
     color: #7dd0dc;
   }
@@ -265,16 +188,6 @@
   .FeaturetGroup:hover {
     border: 1px solid black;
   }
-
-  .SmallFeatureTxtTheme {
-    color: black;
-  }
-
-  .SmallFeatureTxtTheme:hover {
-    color: #7dd0dc;
-    text-decoration: none;
-  }
-
   .OffersConnected .Connected .HrefContactEnd a:hover {
     background-color: black;
   }
@@ -382,6 +295,52 @@
     font-weight: 600;
     width: 60%;
   }
+  .JOIN a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+  }
+  .LatestShopping .row .Item::before, .LatestShopping .row .Item::after{
+    content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .Rectangleitem{
+      position: absolute;
+        width: 50px;
+        height: 5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .Month h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -25px;
+      }
+      .OffersConnected .Offers .SearchSub a {
+        text-decoration: none;
+        color: black;
+        border: 3px solid black;
+        font-weight: 500;
+        padding: 2px 10px;
+      }
+      .RectangleG {
+        background-color: #7dd0dc;
+      }
+  
+      .RectangleB {
+        background-color: #d4bcb5;
+      }
+  
+      .RectangleO {
+        background-color: #ffa396;
+      }
   @media screen and (max-width:767px) {
     .DropDowns .row .col-md-12 .breadcrumb {
       border-top: 2px solid rgb(211, 206, 206);
@@ -405,12 +364,8 @@
     }
 
     .JOIN a {
-      color: black;
-      text-decoration: none;
-      background-color: white;
       padding: 5px 5px;
     }
-
     .JOIN {
       position: absolute;
       bottom: 0;
@@ -438,27 +393,16 @@
       position: relative;
     }
     .LatestShopping .row .Item::before {
-        content: '';
-        position: absolute;
         width: 390px;
         height: 1px;
-        left: 0;
-        right: 0;
-        margin: auto;
         top: -29px;
       }
     .LatestShopping .row .Item::after {
-      content: '';
-      position: absolute;
       width: 390px;
       height: 1px;
       background-color: rgb(207, 203, 203);
-      left: 0;
-      right: 0;
-      margin: auto;
       bottom: -37px;
     }
-
     .LatestShopping .row .ItemTopLineG::before {
       background-color: #7dd0dc;
     }
@@ -491,27 +435,8 @@
     }
 
     .Rectangleitem{
-        position: absolute;
-        width: 50px;
-        height: 5px;
-        left: 0;
-        right: 0;
-        margin: auto;
         top: 2px;
     }
-
-    .RectangleG {
-      background-color: #7dd0dc;
-    }
-
-    .RectangleB {
-      background-color: #d4bcb5;
-    }
-
-    .RectangleO {
-      background-color: #ffa396;
-    }
-
     .HairExten .row .col-12 .HairTxtGroup a:hover {
       color: white;
       background-color: black;
@@ -609,13 +534,12 @@
     .SmallSaleTxt .eye {
       display: none;
     }
-    .SmallSaleTxt .heart {
+    .SmallSaleTxt .heart,.SmallFeatureTxt .heart {
       display: block;
       font-size: 20px;
       margin-top: 20px;
       color: gray;
     }
-
     .SmallSaleTxt a {
       text-decoration: none;
     }
@@ -664,14 +588,9 @@
       font-weight: 500;
     }
 
-    .SEEContent {
+    .SEEContent, .Month {
       text-align: center;
     }
-
-    .Month {
-      text-align: center;
-    }
-
     .Month h4 {
       font-weight: 700;
       font-size: 20px;
@@ -688,15 +607,8 @@
       padding: 20px 0 5px 0;
     }
     .Month h4::before {
-      content: '';
-      position: absolute;
       border-top: 1px solid rgb(214, 209, 209);
-      left: 0;
-      right: 0;
-      margin: auto;
-      top:-25px
     }
-
     .Month .rectangle {
       position: absolute;
       width: 45px;
@@ -769,13 +681,6 @@
     .SmallFeatureTxt .eye {
       display: none;
     }
-    .SmallFeatureTxt .heart {
-      display: block;
-      font-size: 20px;
-      margin-top: 20px;
-      color: gray;
-    }
-
     .SmallFeatureTxt a {
       text-decoration: none;
     }
@@ -827,15 +732,6 @@
     .OffersConnected .Offers .SearchSub .Searchlocal {
       width: 160px;
     }
-
-    .OffersConnected .Offers .SearchSub a {
-      text-decoration: none;
-      color: black;
-      border: 3px solid black;
-      font-weight: 500;
-      padding: 2px 10px;
-    }
-
     .OffersConnected .Connected h4 {
       font-size: 20px;
       font-weight: 700;
@@ -870,17 +766,15 @@
       font-size: 16px;
       margin-top: 25px;
     }
-
-    .NavCate h3 {
+    .NavCate h3 ,.NavMenu h3{
       font-size: 18px;
       color: white;
       font-weight: 600;
+    }
+    .NavCate h3 {
       margin-top: 5px;
     }
     .NavMenu h3 {
-      font-size: 18px;
-      color: white;
-      font-weight: 600;
       margin-top: 20px;
     }
 
@@ -1022,12 +916,9 @@
       left: 112px;
       text-align: right;
     }
-
-    .FullImgTxt::before {
+    .FullImgTxt::before, .FullImgTxt::after{
       content: '';
       position: absolute;
-      width: 550px;
-      height: 1px;
       background-color: white;
       left: 0;
       right: 0;
@@ -1035,18 +926,14 @@
       margin-left: 45px;
       top: -20px;
     }
+    .FullImgTxt::before {
+      width: 550px;
+      height: 1px;
+    }
 
     .FullImgTxt::after {
-      content: '';
-      position: absolute;
       width: 65px;
       height: 5px;
-      background-color: white;
-      left: 0;
-      right: 0;
-      margin: auto;
-      margin-left: 45px;
-      top: -20px;
     }
 
     .FullImgContent {
@@ -1058,13 +945,9 @@
     }
 
     .JOIN a {
-      color: black;
-      text-decoration: none;
-      background-color: white;
       font-size: 20px;
       padding: 31px 40px;
     }
-
     .JOIN {
       position: absolute;
       bottom: 0;
@@ -1073,15 +956,9 @@
       text-align: center;
     }
     .LatestShopping .row .Item::after {
-      content: '';
-      position: absolute;
       border-top: 1px solid gray;
-      left: 0;
-      right: 0;
-      margin: auto;
       bottom: 0;
     }
-
     .LatestShopping .row .col-md-4 {
       padding: 0 35px;
     }
@@ -1095,11 +972,6 @@
       border-top: 1px solid #7dd0dc;
     }
     .LatestShopping .row .Item::before{
-    content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
       top: 0;
     }
     .LatestShopping .row .ItemTopLineB::before {
@@ -1124,26 +996,8 @@
       text-decoration: none;
     }
     .Rectangleitem{
-    position: absolute;
-      width: 50px;
-      height: 5px;
-      left: 0;
-      right: 0;
-      margin: auto;
       top: 0px;
     }
-    .RectangleG {
-      background-color: #7dd0dc;
-    }
-
-    .RectangleB {
-      background-color: #d4bcb5;
-    }
-
-    .RectangleO {
-      background-color: #ffa396;
-    }
-
     .HairImg {
       height: 500px;
     }
@@ -1342,17 +1196,10 @@
       padding: 0 30px;
     }
     .Month h4::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
       width: 90%;
       height: 1px;
       background-color: rgb(209, 204, 204);
-      top: -25px;
     }
-
     .Month .rectangle {
       position: absolute;
       width: 45px;
@@ -1434,16 +1281,6 @@
       font-size: 18px;
       margin-top: 25px;
     }
-
-    .heart {
-      color: gray;
-      margin-right: 15px;
-    }
-
-    .eye {
-      color: gray;
-    }
-
     .SmallFeatureTxtLine {
       padding-bottom: 30px;
     }
@@ -1507,15 +1344,6 @@
     .OffersConnected .Offers .SearchSub .Searchlocal {
       width: 370px;
     }
-
-    .OffersConnected .Offers .SearchSub a {
-      text-decoration: none;
-      color: black;
-      border: 3px solid black;
-      font-weight: 500;
-      padding: 2px 10px;
-    }
-
     .OffersConnected .Connected h4 {
       font-size: 24px;
       font-weight: 700;
@@ -1551,17 +1379,11 @@
       margin-top: 25px;
     }
 
-    .NavCate h3 {
+    .NavCate h3, .NavMenu h3{
       font-size: 20px;
       color: white;
       font-weight: 600;
     }
-    .NavMenu h3 {
-      font-size: 20px;
-      color: white;
-      font-weight: 600;
-    }
-
     .NavMenu p, .NavCate p {
       color: #d3d3d3;
       font-weight: 300;
